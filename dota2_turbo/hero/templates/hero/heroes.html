@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block heroes-active %} active {% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <h1 class="page-title">Heroes Statistics</h1>
+        <p class="page-subtitle">Complete hero statistics and meta data</p>
+    </div>
+</section>
+
+<section class="heroes-section">
+    <div class="container">
+        <div class="heroes-grid">
+            <div class="hero-card">
+                <div class="hero-banner" style="background: linear-gradient(135deg, #1a3a52 0%, #0d1f2d 100%);">
+                    <span class="hero-name">Anti-Mage</span>
+                </div>
+                <div class="hero-stats">
+                    <p><strong>Pick Rate:</strong> <span class="stat-high">18.5%</span></p>
+                    <p><strong>Win Rate:</strong> <span class="stat-high">52.3%</span></p>
+                    <p><strong>Ban Rate:</strong> <span class="stat-med">5.2%</span></p>
+                </div>
+            </div>
+
+            <div class="hero-card">
+                <div class="hero-banner" style="background: linear-gradient(135deg, #3d2817 0%, #1f1410 100%);">
+                    <span class="hero-name">Pudge</span>
+                </div>
+                <div class="hero-stats">
+                    <p><strong>Pick Rate:</strong> <span class="stat-high">22.1%</span></p>
+                    <p><strong>Win Rate:</strong> <span class="stat-high">51.8%</span></p>
+                    <p><strong>Ban Rate:</strong> <span class="stat-low">3.1%</span></p>
+                </div>
+            </div>
+
+            <div class="hero-card">
+                <div class="hero-banner" style="background: linear-gradient(135deg, #2d1a3a 0%, #1a0f22 100%);">
+                    <span class="hero-name">Invoker</span>
+                </div>
+                <div class="hero-stats">
+                    <p><strong>Pick Rate:</strong> <span class="stat-high">19.7%</span></p>
+                    <p><strong>Win Rate:</strong> <span class="stat-med">50.2%</span></p>
+                    <p><strong>Ban Rate:</strong> <span class="stat-med">8.5%</span></p>
+                </div>
+            </div>
+
+            <div class="hero-card">
+                <div class="hero-banner" style="background: linear-gradient(135deg, #1a2d3a 0%, #0d1620 100%);">
+                    <span class="hero-name">Tiny</span>
+                </div>
+                <div class="hero-stats">
+                    <p><strong>Pick Rate:</strong> <span class="stat-med">15.3%</span></p>
+                    <p><strong>Win Rate:</strong> <span class="stat-high">53.1%</span></p>
+                    <p><strong>Ban Rate:</strong> <span class="stat-low">2.7%</span></p>
+                </div>
+            </div>
+
+            <div class="hero-card">
+                <div class="hero-banner" style="background: linear-gradient(135deg, #3a1a2d 0%, #1f0d18 100%);">
+                    <span class="hero-name">Void Spirit</span>
+                </div>
+                <div class="hero-stats">
+                    <p><strong>Pick Rate:</strong> <span class="stat-med">14.2%</span></p>
+                    <p><strong>Win Rate:</strong> <span class="stat-med">49.5%</span></p>
+                    <p><strong>Ban Rate:</strong> <span class="stat-low">1.9%</span></p>
+                </div>
+            </div>
+
+            <div class="hero-card">
+                <div class="hero-banner" style="background: linear-gradient(135deg, #1a3a1a 0%, #0d1f0d 100%);">
+                    <span class="hero-name">Nature's Prophet</span>
+                </div>
+                <div class="hero-stats">
+                    <p><strong>Pick Rate:</strong> <span class="stat-med">12.8%</span></p>
+                    <p><strong>Win Rate:</strong> <span class="stat-med">48.9%</span></p>
+                    <p><strong>Ban Rate:</strong> <span class="stat-med">4.3%</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

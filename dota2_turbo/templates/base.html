@@ -14,16 +14,13 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <div class="logo-icon">
-                        <img src="{% static 'img/logo.png' %}" alt="Dota 2 Turbo Logo"/>
-                    </div>
+                    <img src="{% static 'img/logo.png' %}" class="logo-icon" alt="Dota 2 Turbo Logo"/>
                     <span class="logo-text">Dota 2 Turbo</span>
                 </div>
                 <nav class="nav">
-                    <a href="index.html" class="nav-link active">Home</a>
-                    <a href="heroes.html" class="nav-link">Heroes</a>
+                    <a href={% url "leaderboard:leaderboard" %} class="nav-link {% block leaderboard-active %} {% endblock %}">Leaderboard</a>
+                    <a href="{% url "hero:heroes" %}" class="nav-link {% block heroes-active %} {% endblock %}">Heroes</a>
                     <a href="statistics.html" class="nav-link">Statistics</a>
-                    <a href="leaderboard.html" class="nav-link">Leaderboard</a>
                     <a href="about.html" class="nav-link">About</a>
                 </nav>
             </div>

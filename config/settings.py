@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     # local
     'dota2_turbo.leaderboard',
+    'dota2_turbo.hero',
 ]
 
 MIDDLEWARE = [

@@ -3,7 +3,7 @@ from django.shortcuts import render
 
 def leaderboard(request):
     context = {
-        'title': 'Leaderboard - Dota 2 Stats Hub'
+        'title': 'Leaderboard - Dota 2 Turbo Stats'
     }
     return render(
         request,
