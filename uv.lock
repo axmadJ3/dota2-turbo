@@ -26,7 +26,7 @@ wheels = [
 ]
 
 [[package]]
-name = "dota-2-turbo-v2"
+name = "dota2-turbo"
 version = "1.0"
 source = { virtual = "." }
 dependencies = [

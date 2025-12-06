@@ -1,5 +1,5 @@
 [project]
-name = "dota-2-turbo-v2"
+name = "dota2-turbo"
 version = "1.0"
 description = "turbodota.xyz 2.0 version"
 readme = "README.md"
