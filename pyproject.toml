@@ -1,0 +1,9 @@
+[project]
+name = "dota-2-turbo-v2"
+version = "1.0"
+description = "turbodota.xyz 2.0 version"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "django==5.2.7",
+]
