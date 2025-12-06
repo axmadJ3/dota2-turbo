@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # local
+    'dota2_turbo.leaderboard',
 ]
 
 MIDDLEWARE = [
@@ -114,8 +117,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = 'static/'
-STATIC_ROOT = BASE_DIR / 'dota2_turbo/static/'
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles/'
+STATICFILES_DIRS = [
+    BASE_DIR / 'dota2_turbo/static',
+]
 
 
 # Default primary key field type

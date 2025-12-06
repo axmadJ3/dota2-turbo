@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <h1 class="page-title">Leaderboard</h1>
+        <p class="page-subtitle">Top ranked players globally</p>
+    </div>
+</section>
+
+<section class="table-section">
+    <div class="container">
+        <table class="leaderboard-table">
+            <thead>
+                <tr>
+                    <th>Position</th>
+                    <th>Nickname</th>
+                    <th>Rating</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="rank-1">
+                    <td><span class="medal">🥇</span> 1</td>
+                    <td>SkylarMage</td>
+                    <td class="rating-high">9847</td>
+                </tr>
+                <tr class="rank-2">
+                    <td><span class="medal">🥈</span> 2</td>
+                    <td>NeonCyber</td>
+                    <td class="rating-high">9723</td>
+                </tr>
+                <tr class="rank-3">
+                    <td><span class="medal">🥉</span> 3</td>
+                    <td>DarkPhoenix</td>
+                    <td class="rating-high">9681</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>BlazeFury</td>
+                    <td class="rating-high">9542</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>SilentStrike</td>
+                    <td class="rating-high">9438</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>VortexKing</td>
+                    <td class="rating-high">9315</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>EchoMind</td>
+                    <td class="rating-high">9204</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>CrimsonEdge</td>
+                    <td class="rating-high">9087</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>NovaNight</td>
+                    <td class="rating-high">8956</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>LunaWolf</td>
+                    <td class="rating-high">8842</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+{% endblock %}
