@@ -1,0 +1,33 @@
+services:
+  db:
+    image: postgres:16.2
+    restart: always
+    container_name: postgres-local
+    env_file:
+      - .env
+    environment:
+      - POSTGRES_DB=${POSTGRES_DB}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+
+  web:
+    build: .
+    container_name: web-local
+    command: bash -c "
+        python manage.py makemigrations
+        && python manage.py migrate
+        && python manage.py runserver 0.0.0.0:8000
+      "
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    environment:
+      - STEAM_API_KEY=${STEAM_API_KEY}
+      - DJANGO_SETTINGS_MODULE=config.settings.dev
+      - POSTGRES_DB=${POSTGRES_DB}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+
+    depends_on:
+      - db
