@@ -9,4 +9,7 @@ COPY requirements.txt .
 RUN pip install --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org -r requirements.txt
 COPY . .
 
+RUN sed -i 's/\r$//' wait-for-it.sh \
+    && chmod +x wait-for-it.sh
+
 EXPOSE 8000

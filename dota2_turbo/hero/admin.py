@@ -1,3 +1,8 @@
 from django.contrib import admin
 
-# Register your models here.
+from dota2_turbo.hero.models import Hero
+
+
+@admin.register(Hero)
+class HeroAdmin(admin.ModelAdmin):
+    list_display = ('name', 'hero_id')
