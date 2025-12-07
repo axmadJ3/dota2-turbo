@@ -3,8 +3,9 @@ from django.urls import path
 from . import views
 
 
-app_name = 'dota2_turbo.leaderboard'
+app_name = 'leaderboard'
 
 urlpatterns = [
     path('', views.leaderboard, name='leaderboard'),
+    path('about/', views.about, name='about'),
 ]

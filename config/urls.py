@@ -21,8 +21,9 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('leaderboard/', include('dota2_turbo.leaderboard.urls', namespace='leaderboard')),
+    path('', include('dota2_turbo.leaderboard.urls', namespace='leaderboard')),
     path('hero/', include('dota2_turbo.hero.urls', namespace='hero')),
+    path('auth/', include('dota2_turbo.authentication.urls', namespace='auth')),
     path('social/', include('social_django.urls', namespace="social")),
 ]
 

@@ -1,5 +1,5 @@
 from django.views import View
-from django.contrib.auth.views import logout
+from django.contrib.auth import logout
 from django.shortcuts import redirect
 
 class LogoutView(View):

@@ -99,6 +99,17 @@ html, body {
     border-bottom: 2px solid transparent;
 }
 
+.nav-button {
+    background-color: var(--accent-gold);
+    color: var(--primary-dark);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-bottom: none;
+    text-decoration: none;
+}
+
 .nav-link:hover {
     color: var(--accent-gold);
     border-bottom-color: var(--accent-gold);

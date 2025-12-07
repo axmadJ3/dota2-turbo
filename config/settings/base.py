@@ -73,6 +73,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
@@ -144,7 +146,7 @@ AUTHENTICATION_BACKENDS = (
 SOCIAL_AUTH_STEAM_API_KEY = config('STEAM_API_KEY')
 SOCIAL_AUTH_STEAM_EXTRA_DATA = ['player']
 
-SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/leaderboard/'
+SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/about/'
 SOCIAL_AUTH_LOGIN_ERROR_URL = '/'
 
 AUTH_USER_MODEL = 'dota2_turbo_authentication.SteamUser'
