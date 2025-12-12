@@ -9,11 +9,11 @@ from dota2_turbo.hero.models import Hero, HeroFacet
 FACETS_JSON = settings.BASE_DIR / "dota2_turbo/hero/feeds/facets.json"
 
 class Command(BaseCommand):
-    help = "Load hero facets from facets.json"
+    help = "Load hero facets from hero/feeds/facets.json"
 
     def handle(self, *args, **kwargs):
         if not FACETS_JSON.exists():
-            self.stderr.write(self.style.ERROR("facets.json.json not found"))
+            self.stderr.write(self.style.ERROR("facets.json not found"))
             return
 
         with open(FACETS_JSON, "r", encoding="utf-8") as f:

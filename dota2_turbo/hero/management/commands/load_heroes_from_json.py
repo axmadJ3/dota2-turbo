@@ -9,11 +9,11 @@ from dota2_turbo.hero.models import Hero
 HEROES_JSON = settings.BASE_DIR / "dota2_turbo/hero/feeds/heroes.json"
 
 class Command(BaseCommand):
-    help = "Load heroes from heroes.json"
+    help = "Load heroes from hero/feeds/heroes.json"
 
     def handle(self, *args, **kwargs):
         if not HEROES_JSON.exists():
-            self.stderr.write(self.style.ERROR("heroes.json.json not found"))
+            self.stderr.write(self.style.ERROR("heroes.json not found"))
             return
 
         with open(HEROES_JSON, "r", encoding="utf-8") as f:
