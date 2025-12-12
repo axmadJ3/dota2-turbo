@@ -43,6 +43,7 @@ INSTALLED_APPS = [
 
     # 3rd party
     'social_django',
+    'django_celery_beat',
 
     # local
     'dota2_turbo.leaderboard.apps.LeaderboardConfig',
@@ -93,6 +94,16 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+
+# Celery Configuration Options
+
+CELERY_BROKER_URL = 'redis://redis:6379'
+CELERY_RESULT_BACKEND = 'redis://redis:6379'
+CELERY_ACCEPT_CONTENT = ['application/json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
+CELERY_BEAT_SCHEDULER = 'django_celery_beat.schedulers:DatabaseScheduler'
 
 
 # Password validation
