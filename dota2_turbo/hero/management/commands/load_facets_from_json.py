@@ -35,7 +35,6 @@ class Command(BaseCommand):
                         "color": facet["color"],
                         "gradient_id": facet["gradient_id"],
                         "tier": "NR",
-                        "positions": [],
                         "winrate": 0.0,
                         "pickrate": 0.0,
                     }

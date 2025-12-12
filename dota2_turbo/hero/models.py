@@ -9,10 +9,15 @@ class Hero(models.Model):
     class Meta:
         verbose_name = "Hero"
         verbose_name_plural = "Heroes"
+        indexes = [
+            models.Index(fields=['name']),
+            GinIndex(fields=['positions']),
+        ]
 
     hero_id = models.IntegerField(unique=True)
     name = models.CharField(max_length=100, unique=True, db_index=True)
     image_url = models.URLField()
+    positions = ArrayField(models.CharField(max_length=50), default=list)
 
     def __str__(self):
         return self.name
@@ -33,7 +38,6 @@ class HeroTier(models.Model):
             models.Index(fields=["period"]),
             models.Index(fields=["hero"]),
             models.Index(fields=["tier"]),
-            GinIndex(fields=["positions"]),
         ]
 
     hero = models.ForeignKey(
@@ -41,7 +45,6 @@ class HeroTier(models.Model):
         on_delete=models.CASCADE
     )
     tier = models.CharField(max_length=2)
-    positions = ArrayField(models.CharField(max_length=50), default=list)
     winrate = models.DecimalField(max_digits=5, decimal_places=2, default=Decimal('0.00'))
     pickrate = models.DecimalField(max_digits=5, decimal_places=2, default=Decimal('0.00'))
     period = models.CharField(max_length=20, choices=PERIOD_CHOICES, default='6months')
@@ -58,7 +61,6 @@ class HeroFacet(models.Model):
         indexes = [
             models.Index(fields=["hero"]),
             models.Index(fields=["tier"]),
-            GinIndex(fields=["positions"]),
         ]
 
     hero = models.ForeignKey(
@@ -72,7 +74,6 @@ class HeroFacet(models.Model):
     icon = models.CharField(max_length=50)
     color = models.CharField(max_length=50)
     gradient_id = models.IntegerField(default=0)
-    positions = ArrayField(models.CharField(max_length=50), default=list)
     winrate = models.DecimalField(max_digits=5, decimal_places=2, default=Decimal('0.00'))
     pickrate = models.DecimalField(max_digits=5, decimal_places=2, default=Decimal('0.00'))
     tier = models.CharField(max_length=2, default='NR')

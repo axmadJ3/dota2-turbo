@@ -24,11 +24,13 @@ class Command(BaseCommand):
             hero_id = entry["hero_id"]
             name = entry["hero"]
             image_url = entry.get("image_url", "")
+            positions = entry.get("positions", [])
 
             Hero.objects.create(
                 hero_id=hero_id,
                 name=name,
-                image_url=image_url
+                image_url=image_url,
+                positions=positions,
             )
             created += 1
 

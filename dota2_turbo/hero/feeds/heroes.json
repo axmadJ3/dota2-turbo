@@ -2,631 +2,1074 @@
   {
     "hero_id": 20,
     "hero": "Vengeful Spirit",
-    "image_url": "https://www.dotabuff.com/assets/heroes/vengeful-spirit.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/vengeful-spirit.jpg",
+    "positions": [
+      "Support Off",
+      "Support Safe"
+    ]
   },
   {
     "hero_id": 30,
     "hero": "Witch Doctor",
-    "image_url": "https://www.dotabuff.com/assets/heroes/witch-doctor.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/witch-doctor.jpg",
+    "positions": [
+      "Support Off",
+      "Support Safe"
+    ]
   },
   {
     "hero_id": 42,
     "hero": "Wraith King",
-    "image_url": "https://www.dotabuff.com/assets/heroes/wraith-king.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/wraith-king.jpg",
+    "positions": [
+      "Core Safe",
+      "Core Off"
+    ]
   },
   {
     "hero_id": 67,
     "hero": "Spectre",
-    "image_url": "https://www.dotabuff.com/assets/heroes/spectre.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/spectre.jpg",
+    "positions": [
+      "Core Safe"
+    ]
   },
   {
     "hero_id": 81,
     "hero": "Chaos Knight",
-    "image_url": "https://www.dotabuff.com/assets/heroes/chaos-knight.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/chaos-knight.jpg",
+    "positions": [
+      "Core Safe"
+    ]
   },
   {
     "hero_id": 14,
     "hero": "Pudge",
-    "image_url": "https://www.dotabuff.com/assets/heroes/pudge.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/pudge.jpg",
+    "positions": [
+      "Support Safe"
+    ]
   },
   {
     "hero_id": 94,
     "hero": "Medusa",
-    "image_url": "https://www.dotabuff.com/assets/heroes/medusa.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/medusa.jpg",
+    "positions": [
+      "Core Safe"
+    ]
   },
   {
     "hero_id": 8,
     "hero": "Juggernaut",
-    "image_url": "https://www.dotabuff.com/assets/heroes/juggernaut.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/juggernaut.jpg",
+    "positions": [
+      "Core Safe"
+    ]
   },
   {
     "hero_id": 6,
     "hero": "Drow Ranger",
-    "image_url": "https://www.dotabuff.com/assets/heroes/drow-ranger.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/drow-ranger.jpg",
+    "positions": [
+      "Core Safe"
+    ]
   },
   {
     "hero_id": 31,
     "hero": "Lich",
-    "image_url": "https://www.dotabuff.com/assets/heroes/lich.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/lich.jpg",
+    "positions": [
+      "Support Off"
+    ]
   },
   {
     "hero_id": 1,
     "hero": "Anti-Mage",
-    "image_url": "https://www.dotabuff.com/assets/heroes/anti-mage.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/anti-mage.jpg",
+    "positions": [
+      "Core Safe"
+    ]
   },
   {
     "hero_id": 28,
     "hero": "Slardar",
-    "image_url": "https://www.dotabuff.com/assets/heroes/slardar.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/slardar.jpg",
+    "positions": [
+      "Core Off",
+      "Support Safe"
+    ]
   },
   {
     "hero_id": 96,
     "hero": "Centaur Warrunner",
-    "image_url": "https://www.dotabuff.com/assets/heroes/centaur-warrunner.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/centaur-warrunner.jpg",
+    "positions": [
+      "Core Off"
+    ]
   },
   {
     "hero_id": 12,
     "hero": "Phantom Lancer",
-    "image_url": "https://www.dotabuff.com/assets/heroes/phantom-lancer.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/phantom-lancer.jpg",
+    "positions": [
+      "Core Safe"
+    ]
   },
   {
     "hero_id": 84,
     "hero": "Ogre Magi",
-    "image_url": "https://www.dotabuff.com/assets/heroes/ogre-magi.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/ogre-magi.jpg",
+    "positions": [
+      "Support Off"
+    ]
   },
   {
     "hero_id": 37,
     "hero": "Warlock",
-    "image_url": "https://www.dotabuff.com/assets/heroes/warlock.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/warlock.jpg",
+    "positions": [
+      "Support Off"
+    ]
   },
   {
     "hero_id": 56,
     "hero": "Clinkz",
-    "image_url": "https://www.dotabuff.com/assets/heroes/clinkz.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/clinkz.jpg",
+    "positions": [
+      "Core Safe"
+    ]
   },
   {
     "hero_id": 44,
     "hero": "Phantom Assassin",
-    "image_url": "https://www.dotabuff.com/assets/heroes/phantom-assassin.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/phantom-assassin.jpg",
+    "positions": [
+      "Core Safe"
+    ]
   },
   {
     "hero_id": 102,
     "hero": "Abaddon",
-    "image_url": "https://www.dotabuff.com/assets/heroes/abaddon.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/abaddon.jpg",
+    "positions": [
+      "Core Off"
+    ]
   },
   {
     "hero_id": 29,
     "hero": "Tidehunter",
-    "image_url": "https://www.dotabuff.com/assets/heroes/tidehunter.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/tidehunter.jpg",
+    "positions": [
+      "Core Off"
+    ]
   },
   {
     "hero_id": 36,
     "hero": "Necrophos",
-    "image_url": "https://www.dotabuff.com/assets/heroes/necrophos.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/necrophos.jpg",
+    "positions": [
+      "Core Mid",
+      "Core Off"
+    ]
   },
   {
     "hero_id": 16,
     "hero": "Sand King",
-    "image_url": "https://www.dotabuff.com/assets/heroes/sand-king.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/sand-king.jpg",
+    "positions": [
+      "Core Off"
+    ]
   },
   {
     "hero_id": 52,
     "hero": "Leshrac",
-    "image_url": "https://www.dotabuff.com/assets/heroes/leshrac.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/leshrac.jpg",
+    "positions": [
+      "Core Mid",
+      "Core Off",
+      "Support Safe"
+    ]
   },
   {
     "hero_id": 41,
     "hero": "Faceless Void",
-    "image_url": "https://www.dotabuff.com/assets/heroes/faceless-void.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/faceless-void.jpg",
+    "positions": [
+      "Core Safe"
+    ]
   },
   {
     "hero_id": 101,
     "hero": "Skywrath Mage",
-    "image_url": "https://www.dotabuff.com/assets/heroes/skywrath-mage.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/skywrath-mage.jpg",
+    "positions": [
+      "Core Mid",
+      "Support Off",
+      "Support Safe"
+    ]
   },
   {
     "hero_id": 21,
     "hero": "Windranger",
-    "image_url": "https://www.dotabuff.com/assets/heroes/windranger.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/windranger.jpg",
+    "positions": [
+      "Core Mid",
+      "Core Off",
+      "Support Safe"
+    ]
   },
   {
     "hero_id": 40,
     "hero": "Venomancer",
-    "image_url": "https://www.dotabuff.com/assets/heroes/venomancer.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/venomancer.jpg",
+    "positions": [
+      "Core Off",
+      "Support Off",
+      "Support Safe"
+    ]
   },
   {
     "hero_id": 27,
     "hero": "Shadow Shaman",
-    "image_url": "https://www.dotabuff.com/assets/heroes/shadow-shaman.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/shadow-shaman.jpg",
+    "positions": [
+      "Support Off",
+      "Support Safe"
+    ]
   },
   {
     "hero_id": 111,
     "hero": "Oracle",
-    "image_url": "https://www.dotabuff.com/assets/heroes/oracle.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/oracle.jpg",
+    "positions": [
+      "Support Safe"
+    ]
   },
   {
     "hero_id": 2,
     "hero": "Axe",
-    "image_url": "https://www.dotabuff.com/assets/heroes/axe.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/axe.jpg",
+    "positions": [
+      "Core Off"
+    ]
   },
   {
     "hero_id": 63,
     "hero": "Weaver",
-    "image_url": "https://www.dotabuff.com/assets/heroes/weaver.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/weaver.jpg",
+    "positions": [
+      "Core Safe",
+      "Support Safe"
+    ]
   },
   {
     "hero_id": 138,
     "hero": "Muerta",
-    "image_url": "https://www.dotabuff.com/assets/heroes/muerta.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/muerta.jpg",
+    "positions": [
+      "Core Safe"
+    ]
   },
   {
     "hero_id": 75,
     "hero": "Silencer",
-    "image_url": "https://www.dotabuff.com/assets/heroes/silencer.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/silencer.jpg",
+    "positions": [
+      "Core Safe",
+      "Core Mid",
+      "Support Off",
+      "Support Safe"
+    ]
   },
   {
     "hero_id": 95,
     "hero": "Troll Warlord",
-    "image_url": "https://www.dotabuff.com/assets/heroes/troll-warlord.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/troll-warlord.jpg",
+    "positions": [
+      "Core Safe"
+    ]
   },
   {
     "hero_id": 135,
     "hero": "Dawnbreaker",
-    "image_url": "https://www.dotabuff.com/assets/heroes/dawnbreaker.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/dawnbreaker.jpg",
+    "positions": [
+      "Core Off",
+      "Support Safe"
+    ]
   },
   {
     "hero_id": 55,
     "hero": "Dark Seer",
-    "image_url": "https://www.dotabuff.com/assets/heroes/dark-seer.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/dark-seer.jpg",
+    "positions": [
+      "Core Off"
+    ]
   },
   {
     "hero_id": 73,
     "hero": "Alchemist",
-    "image_url": "https://www.dotabuff.com/assets/heroes/alchemist.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/alchemist.jpg",
+    "positions": [
+      "Core Safe",
+      "Core Off"
+    ]
   },
   {
     "hero_id": 70,
     "hero": "Ursa",
-    "image_url": "https://www.dotabuff.com/assets/heroes/ursa.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/ursa.jpg",
+    "positions": [
+      "Core Safe"
+    ]
   },
   {
     "hero_id": 68,
     "hero": "Ancient Apparition",
-    "image_url": "https://www.dotabuff.com/assets/heroes/ancient-apparition.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/ancient-apparition.jpg",
+    "positions": [
+      "Core Mid",
+      "Support Off"
+    ]
   },
   {
     "hero_id": 50,
     "hero": "Dazzle",
-    "image_url": "https://www.dotabuff.com/assets/heroes/dazzle.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/dazzle.jpg",
+    "positions": [
+      "Support Off"
+    ]
   },
   {
     "hero_id": 76,
     "hero": "Outworld Destroyer",
-    "image_url": "https://www.dotabuff.com/assets/heroes/outworld-destroyer.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/outworld-destroyer.jpg",
+    "positions": [
+      "Core Mid"
+    ]
   },
   {
     "hero_id": 88,
     "hero": "Nyx Assassin",
-    "image_url": "https://www.dotabuff.com/assets/heroes/nyx-assassin.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/nyx-assassin.jpg",
+    "positions": [
+      "Support Safe"
+    ]
   },
   {
     "hero_id": 9,
     "hero": "Mirana",
-    "image_url": "https://www.dotabuff.com/assets/heroes/mirana.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/mirana.jpg",
+    "positions": [
+      "Support Safe"
+    ]
   },
   {
     "hero_id": 51,
     "hero": "Clockwerk",
-    "image_url": "https://www.dotabuff.com/assets/heroes/clockwerk.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/clockwerk.jpg",
+    "positions": [
+      "Core Off",
+      "Support Off",
+      "Support Safe"
+    ]
   },
   {
     "hero_id": 74,
     "hero": "Invoker",
-    "image_url": "https://www.dotabuff.com/assets/heroes/invoker.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/invoker.jpg",
+    "positions": [
+      "Core Mid"
+    ]
   },
   {
     "hero_id": 15,
     "hero": "Razor",
-    "image_url": "https://www.dotabuff.com/assets/heroes/razor.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/razor.jpg",
+    "positions": [
+      "Core Safe",
+      "Core Mid",
+      "Core Off"
+    ]
   },
   {
     "hero_id": 99,
     "hero": "Bristleback",
-    "image_url": "https://www.dotabuff.com/assets/heroes/bristleback.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/bristleback.jpg",
+    "positions": [
+      "Core Off"
+    ]
   },
   {
     "hero_id": 58,
     "hero": "Enchantress",
-    "image_url": "https://www.dotabuff.com/assets/heroes/enchantress.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/enchantress.jpg",
+    "positions": [
+      "Support Off",
+      "Support Safe"
+    ]
   },
   {
     "hero_id": 49,
     "hero": "Dragon Knight",
-    "image_url": "https://www.dotabuff.com/assets/heroes/dragon-knight.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/dragon-knight.jpg",
+    "positions": [
+      "Core Safe",
+      "Core Mid",
+      "Core Off"
+    ]
   },
   {
     "hero_id": 22,
     "hero": "Zeus",
-    "image_url": "https://www.dotabuff.com/assets/heroes/zeus.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/zeus.jpg",
+    "positions": [
+      "Core Mid",
+      "Support Off"
+    ]
   },
   {
     "hero_id": 35,
     "hero": "Sniper",
-    "image_url": "https://www.dotabuff.com/assets/heroes/sniper.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/sniper.jpg",
+    "positions": [
+      "Core Safe",
+      "Core Mid",
+      "Support Off",
+      "Support Safe"
+    ]
   },
   {
     "hero_id": 57,
     "hero": "Omniknight",
-    "image_url": "https://www.dotabuff.com/assets/heroes/omniknight.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/omniknight.jpg",
+    "positions": [
+      "Core Off",
+      "Support Off"
+    ]
   },
   {
     "hero_id": 48,
     "hero": "Luna",
-    "image_url": "https://www.dotabuff.com/assets/heroes/luna.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/luna.jpg",
+    "positions": [
+      "Core Safe"
+    ]
   },
   {
     "hero_id": 33,
     "hero": "Enigma",
-    "image_url": "https://www.dotabuff.com/assets/heroes/enigma.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/enigma.jpg",
+    "positions": [
+      "Core Off",
+      "Support Off"
+    ]
   },
   {
     "hero_id": 5,
     "hero": "Crystal Maiden",
-    "image_url": "https://www.dotabuff.com/assets/heroes/crystal-maiden.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/crystal-maiden.jpg",
+    "positions": [
+      "Support Off"
+    ]
   },
   {
     "hero_id": 85,
     "hero": "Undying",
-    "image_url": "https://www.dotabuff.com/assets/heroes/undying.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/undying.jpg",
+    "positions": [
+      "Support Off"
+    ]
   },
   {
     "hero_id": 112,
     "hero": "Winter Wyvern",
-    "image_url": "https://www.dotabuff.com/assets/heroes/winter-wyvern.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/winter-wyvern.jpg",
+    "positions": [
+      "Support Safe"
+    ]
   },
   {
     "hero_id": 108,
     "hero": "Underlord",
-    "image_url": "https://www.dotabuff.com/assets/heroes/underlord.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/underlord.jpg",
+    "positions": [
+      "Core Off"
+    ]
   },
   {
     "hero_id": 89,
     "hero": "Naga Siren",
-    "image_url": "https://www.dotabuff.com/assets/heroes/naga-siren.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/naga-siren.jpg",
+    "positions": [
+      "Core Safe",
+      "Support Off"
+    ]
   },
   {
     "hero_id": 72,
     "hero": "Gyrocopter",
-    "image_url": "https://www.dotabuff.com/assets/heroes/gyrocopter.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/gyrocopter.jpg",
+    "positions": [
+      "Core Safe"
+    ]
   },
   {
     "hero_id": 7,
     "hero": "Earthshaker",
-    "image_url": "https://www.dotabuff.com/assets/heroes/earthshaker.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/earthshaker.jpg",
+    "positions": []
   },
   {
     "hero_id": 26,
     "hero": "Lion",
-    "image_url": "https://www.dotabuff.com/assets/heroes/lion.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/lion.jpg",
+    "positions": [
+      "Support Off"
+    ]
   },
   {
     "hero_id": 93,
     "hero": "Slark",
-    "image_url": "https://www.dotabuff.com/assets/heroes/slark.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/slark.jpg",
+    "positions": [
+      "Core Safe"
+    ]
   },
   {
     "hero_id": 47,
     "hero": "Viper",
-    "image_url": "https://www.dotabuff.com/assets/heroes/viper.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/viper.jpg",
+    "positions": [
+      "Core Safe",
+      "Core Mid",
+      "Core Off"
+    ]
   },
   {
     "hero_id": 32,
     "hero": "Riki",
-    "image_url": "https://www.dotabuff.com/assets/heroes/riki.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/riki.jpg",
+    "positions": [
+      "Core Safe",
+      "Support Safe"
+    ]
   },
   {
     "hero_id": 54,
     "hero": "Lifestealer",
-    "image_url": "https://www.dotabuff.com/assets/heroes/lifestealer.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/lifestealer.jpg",
+    "positions": [
+      "Core Safe"
+    ]
   },
   {
     "hero_id": 137,
     "hero": "Primal Beast",
-    "image_url": "https://www.dotabuff.com/assets/heroes/primal-beast.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/primal-beast.jpg",
+    "positions": [
+      "Core Off",
+      "Support Safe"
+    ]
   },
   {
     "hero_id": 18,
     "hero": "Sven",
-    "image_url": "https://www.dotabuff.com/assets/heroes/sven.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/sven.jpg",
+    "positions": [
+      "Core Safe"
+    ]
   },
   {
     "hero_id": 86,
     "hero": "Rubick",
-    "image_url": "https://www.dotabuff.com/assets/heroes/rubick.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/rubick.jpg",
+    "positions": [
+      "Support Off",
+      "Support Safe"
+    ]
   },
   {
     "hero_id": 98,
     "hero": "Timbersaw",
-    "image_url": "https://www.dotabuff.com/assets/heroes/timbersaw.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/timbersaw.jpg",
+    "positions": [
+      "Core Off"
+    ]
   },
   {
     "hero_id": 77,
     "hero": "Lycan",
-    "image_url": "https://www.dotabuff.com/assets/heroes/lycan.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/lycan.jpg",
+    "positions": [
+      "Core Off"
+    ]
   },
   {
     "hero_id": 17,
     "hero": "Storm Spirit",
-    "image_url": "https://www.dotabuff.com/assets/heroes/storm-spirit.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/storm-spirit.jpg",
+    "positions": [
+      "Core Mid"
+    ]
   },
   {
     "hero_id": 82,
     "hero": "Meepo",
-    "image_url": "https://www.dotabuff.com/assets/heroes/meepo.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/meepo.jpg",
+    "positions": [
+      "Core Mid"
+    ]
   },
   {
     "hero_id": 126,
     "hero": "Void Spirit",
-    "image_url": "https://www.dotabuff.com/assets/heroes/void-spirit.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/void-spirit.jpg",
+    "positions": [
+      "Core Mid"
+    ]
   },
   {
     "hero_id": 91,
     "hero": "Io",
-    "image_url": "https://www.dotabuff.com/assets/heroes/io.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/io.jpg",
+    "positions": [
+      "Support Off",
+      "Support Safe"
+    ]
   },
   {
     "hero_id": 121,
     "hero": "Grimstroke",
-    "image_url": "https://www.dotabuff.com/assets/heroes/grimstroke.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/grimstroke.jpg",
+    "positions": [
+      "Support Off",
+      "Support Safe"
+    ]
   },
   {
     "hero_id": 61,
     "hero": "Broodmother",
-    "image_url": "https://www.dotabuff.com/assets/heroes/broodmother.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/broodmother.jpg",
+    "positions": [
+      "Core Mid"
+    ]
   },
   {
     "hero_id": 39,
     "hero": "Queen of Pain",
-    "image_url": "https://www.dotabuff.com/assets/heroes/queen-of-pain.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/queen-of-pain.jpg",
+    "positions": [
+      "Core Mid"
+    ]
   },
   {
     "hero_id": 64,
     "hero": "Jakiro",
-    "image_url": "https://www.dotabuff.com/assets/heroes/jakiro.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/jakiro.jpg",
+    "positions": [
+      "Support Off",
+      "Support Safe"
+    ]
   },
   {
     "hero_id": 119,
     "hero": "Dark Willow",
-    "image_url": "https://www.dotabuff.com/assets/heroes/dark-willow.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/dark-willow.jpg",
+    "positions": [
+      "Support Off",
+      "Support Safe"
+    ]
   },
   {
     "hero_id": 129,
     "hero": "Mars",
-    "image_url": "https://www.dotabuff.com/assets/heroes/mars.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/mars.jpg",
+    "positions": [
+      "Core Off"
+    ]
   },
   {
     "hero_id": 110,
     "hero": "Phoenix",
-    "image_url": "https://www.dotabuff.com/assets/heroes/phoenix.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/phoenix.jpg",
+    "positions": [
+      "Core Off",
+      "Support Off",
+      "Support Safe"
+    ]
   },
   {
     "hero_id": 103,
     "hero": "Elder Titan",
-    "image_url": "https://www.dotabuff.com/assets/heroes/elder-titan.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/elder-titan.jpg",
+    "positions": [
+      "Support Off"
+    ]
   },
   {
     "hero_id": 59,
     "hero": "Huskar",
-    "image_url": "https://www.dotabuff.com/assets/heroes/huskar.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/huskar.jpg",
+    "positions": [
+      "Core Safe",
+      "Core Mid",
+      "Core Off"
+    ]
   },
   {
     "hero_id": 71,
     "hero": "Spirit Breaker",
-    "image_url": "https://www.dotabuff.com/assets/heroes/spirit-breaker.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/spirit-breaker.jpg",
+    "positions": [
+      "Core Off",
+      "Support Off",
+      "Support Safe"
+    ]
   },
   {
     "hero_id": 43,
     "hero": "Death Prophet",
-    "image_url": "https://www.dotabuff.com/assets/heroes/death-prophet.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/death-prophet.jpg",
+    "positions": [
+      "Core Mid",
+      "Core Off"
+    ]
   },
   {
     "hero_id": 11,
     "hero": "Shadow Fiend",
-    "image_url": "https://www.dotabuff.com/assets/heroes/shadow-fiend.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/shadow-fiend.jpg",
+    "positions": [
+      "Core Safe",
+      "Core Mid"
+    ]
   },
   {
     "hero_id": 45,
     "hero": "Pugna",
-    "image_url": "https://www.dotabuff.com/assets/heroes/pugna.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/pugna.jpg",
+    "positions": [
+      "Support Safe"
+    ]
   },
   {
     "hero_id": 87,
     "hero": "Disruptor",
-    "image_url": "https://www.dotabuff.com/assets/heroes/disruptor.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/disruptor.jpg",
+    "positions": [
+      "Support Off",
+      "Support Safe"
+    ]
   },
   {
     "hero_id": 83,
     "hero": "Treant Protector",
-    "image_url": "https://www.dotabuff.com/assets/heroes/treant-protector.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/treant-protector.jpg",
+    "positions": [
+      "Core Off",
+      "Support Off"
+    ]
   },
   {
     "hero_id": 4,
     "hero": "Bloodseeker",
-    "image_url": "https://www.dotabuff.com/assets/heroes/bloodseeker.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/bloodseeker.jpg",
+    "positions": [
+      "Core Safe"
+    ]
   },
   {
     "hero_id": 104,
     "hero": "Legion Commander",
-    "image_url": "https://www.dotabuff.com/assets/heroes/legion-commander.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/legion-commander.jpg",
+    "positions": [
+      "Core Off"
+    ]
   },
   {
     "hero_id": 60,
     "hero": "Night Stalker",
-    "image_url": "https://www.dotabuff.com/assets/heroes/night-stalker.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/night-stalker.jpg",
+    "positions": [
+      "Core Off"
+    ]
   },
   {
     "hero_id": 123,
     "hero": "Hoodwink",
-    "image_url": "https://www.dotabuff.com/assets/heroes/hoodwink.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/hoodwink.jpg",
+    "positions": [
+      "Support Off",
+      "Support Safe"
+    ]
   },
   {
     "hero_id": 109,
     "hero": "Terrorblade",
-    "image_url": "https://www.dotabuff.com/assets/heroes/terrorblade.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/terrorblade.jpg",
+    "positions": [
+      "Core Safe"
+    ]
   },
   {
     "hero_id": 128,
     "hero": "Snapfire",
-    "image_url": "https://www.dotabuff.com/assets/heroes/snapfire.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/snapfire.jpg",
+    "positions": [
+      "Support Off",
+      "Support Safe"
+    ]
   },
   {
     "hero_id": 25,
     "hero": "Lina",
-    "image_url": "https://www.dotabuff.com/assets/heroes/lina.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/lina.jpg",
+    "positions": [
+      "Core Mid",
+      "Support Safe"
+    ]
   },
   {
     "hero_id": 13,
     "hero": "Puck",
-    "image_url": "https://www.dotabuff.com/assets/heroes/puck.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/puck.jpg",
+    "positions": [
+      "Core Mid"
+    ]
   },
   {
     "hero_id": 79,
     "hero": "Shadow Demon",
-    "image_url": "https://www.dotabuff.com/assets/heroes/shadow-demon.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/shadow-demon.jpg",
+    "positions": [
+      "Support Off",
+      "Support Safe"
+    ]
   },
   {
     "hero_id": 97,
     "hero": "Magnus",
-    "image_url": "https://www.dotabuff.com/assets/heroes/magnus.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/magnus.jpg",
+    "positions": [
+      "Core Off",
+      "Support Safe"
+    ]
   },
   {
     "hero_id": 78,
     "hero": "Brewmaster",
-    "image_url": "https://www.dotabuff.com/assets/heroes/brewmaster.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/brewmaster.jpg",
+    "positions": [
+      "Core Off"
+    ]
   },
   {
     "hero_id": 136,
     "hero": "Marci",
-    "image_url": "https://www.dotabuff.com/assets/heroes/marci.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/marci.jpg",
+    "positions": [
+      "Support Off",
+      "Support Safe"
+    ]
   },
   {
     "hero_id": 62,
     "hero": "Bounty Hunter",
-    "image_url": "https://www.dotabuff.com/assets/heroes/bounty-hunter.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/bounty-hunter.jpg",
+    "positions": [
+      "Support Off",
+      "Support Safe"
+    ]
   },
   {
     "hero_id": 113,
     "hero": "Arc Warden",
-    "image_url": "https://www.dotabuff.com/assets/heroes/arc-warden.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/arc-warden.jpg",
+    "positions": [
+      "Core Mid"
+    ]
   },
   {
     "hero_id": 53,
     "hero": "Nature's Prophet",
-    "image_url": "https://www.dotabuff.com/assets/heroes/natures-prophet.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/natures-prophet.jpg",
+    "positions": []
   },
   {
     "hero_id": 3,
     "hero": "Bane",
-    "image_url": "https://www.dotabuff.com/assets/heroes/bane.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/bane.jpg",
+    "positions": [
+      "Support Off",
+      "Support Safe"
+    ]
   },
   {
     "hero_id": 92,
     "hero": "Visage",
-    "image_url": "https://www.dotabuff.com/assets/heroes/visage.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/visage.jpg",
+    "positions": [
+      "Core Off"
+    ]
   },
   {
     "hero_id": 23,
     "hero": "Kunkka",
-    "image_url": "https://www.dotabuff.com/assets/heroes/kunkka.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/kunkka.jpg",
+    "positions": [
+      "Core Mid",
+      "Core Off"
+    ]
   },
   {
     "hero_id": 105,
     "hero": "Techies",
-    "image_url": "https://www.dotabuff.com/assets/heroes/techies.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/techies.jpg",
+    "positions": [
+      "Support Off",
+      "Support Safe"
+    ]
   },
   {
     "hero_id": 100,
     "hero": "Tusk",
-    "image_url": "https://www.dotabuff.com/assets/heroes/tusk.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/tusk.jpg",
+    "positions": [
+      "Support Off",
+      "Support Safe"
+    ]
   },
   {
     "hero_id": 106,
     "hero": "Ember Spirit",
-    "image_url": "https://www.dotabuff.com/assets/heroes/ember-spirit.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/ember-spirit.jpg",
+    "positions": [
+      "Core Mid"
+    ]
   },
   {
     "hero_id": 131,
     "hero": "Ringmaster",
-    "image_url": "https://www.dotabuff.com/assets/heroes/ringmaster.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/ringmaster.jpg",
+    "positions": [
+      "Support Safe"
+    ]
   },
   {
     "hero_id": 107,
     "hero": "Earth Spirit",
-    "image_url": "https://www.dotabuff.com/assets/heroes/earth-spirit.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/earth-spirit.jpg",
+    "positions": [
+      "Support Off",
+      "Support Safe"
+    ]
   },
   {
     "hero_id": 10,
     "hero": "Morphling",
-    "image_url": "https://www.dotabuff.com/assets/heroes/morphling.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/morphling.jpg",
+    "positions": [
+      "Core Safe",
+      "Core Mid"
+    ]
   },
   {
     "hero_id": 34,
     "hero": "Tinker",
-    "image_url": "https://www.dotabuff.com/assets/heroes/tinker.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/tinker.jpg",
+    "positions": [
+      "Core Mid"
+    ]
   },
   {
     "hero_id": 114,
     "hero": "Monkey King",
-    "image_url": "https://www.dotabuff.com/assets/heroes/monkey-king.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/monkey-king.jpg",
+    "positions": [
+      "Core Safe",
+      "Support Safe"
+    ]
   },
   {
     "hero_id": 46,
     "hero": "Templar Assassin",
-    "image_url": "https://www.dotabuff.com/assets/heroes/templar-assassin.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/templar-assassin.jpg",
+    "positions": [
+      "Core Safe",
+      "Core Mid"
+    ]
   },
   {
     "hero_id": 69,
     "hero": "Doom",
-    "image_url": "https://www.dotabuff.com/assets/heroes/doom.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/doom.jpg",
+    "positions": [
+      "Core Off"
+    ]
   },
   {
     "hero_id": 145,
     "hero": "Kez",
-    "image_url": "https://www.dotabuff.com/assets/heroes/kez.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/kez.jpg",
+    "positions": []
   },
   {
     "hero_id": 80,
     "hero": "Lone Druid",
-    "image_url": "https://www.dotabuff.com/assets/heroes/lone-druid.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/lone-druid.jpg",
+    "positions": []
   },
   {
     "hero_id": 120,
     "hero": "Pangolier",
-    "image_url": "https://www.dotabuff.com/assets/heroes/pangolier.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/pangolier.jpg",
+    "positions": [
+      "Core Mid",
+      "Core Off",
+      "Support Safe"
+    ]
   },
   {
     "hero_id": 19,
     "hero": "Tiny",
-    "image_url": "https://www.dotabuff.com/assets/heroes/tiny.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/tiny.jpg",
+    "positions": [
+      "Core Mid",
+      "Support Safe"
+    ]
   },
   {
     "hero_id": 90,
     "hero": "Keeper of the Light",
-    "image_url": "https://www.dotabuff.com/assets/heroes/keeper-of-the-light.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/keeper-of-the-light.jpg",
+    "positions": [
+      "Support Safe"
+    ]
   },
   {
     "hero_id": 65,
     "hero": "Batrider",
-    "image_url": "https://www.dotabuff.com/assets/heroes/batrider.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/batrider.jpg",
+    "positions": [
+      "Core Mid",
+      "Support Off"
+    ]
   },
   {
     "hero_id": 38,
     "hero": "Beastmaster",
-    "image_url": "https://www.dotabuff.com/assets/heroes/beastmaster.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/beastmaster.jpg",
+    "positions": [
+      "Core Off"
+    ]
   },
   {
     "hero_id": 66,
     "hero": "Chen",
-    "image_url": "https://www.dotabuff.com/assets/heroes/chen.jpg"
+    "image_url": "https://www.dotabuff.com/assets/heroes/chen.jpg",
+    "positions": [
+      "Support Off"
+    ]
   }
 ]
