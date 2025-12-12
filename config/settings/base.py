@@ -45,9 +45,9 @@ INSTALLED_APPS = [
     'social_django',
 
     # local
-    'dota2_turbo.leaderboard',
-    'dota2_turbo.hero',
-    'dota2_turbo.authentication',
+    'dota2_turbo.leaderboard.apps.LeaderboardConfig',
+    'dota2_turbo.hero.apps.HeroConfig',
+    'dota2_turbo.authentication.apps.AuthenticationConfig',
 ]
 
 MIDDLEWARE = [

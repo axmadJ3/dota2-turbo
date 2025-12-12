@@ -42,7 +42,7 @@ class Migration(migrations.Migration):
                 ('winrate', models.DecimalField(decimal_places=2, default=Decimal('0.00'), max_digits=5)),
                 ('pickrate', models.DecimalField(decimal_places=2, default=Decimal('0.00'), max_digits=5)),
                 ('tier', models.CharField(default='NR', max_length=2)),
-                ('hero', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='facets', to='hero.hero')),
+                ('hero', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='facets', to='dota2_turbo_hero.hero')),
             ],
             options={
                 'verbose_name': 'HeroFacet',
@@ -60,7 +60,7 @@ class Migration(migrations.Migration):
                 ('winrate', models.DecimalField(decimal_places=2, default=Decimal('0.00'), max_digits=5)),
                 ('pickrate', models.DecimalField(decimal_places=2, default=Decimal('0.00'), max_digits=5)),
                 ('period', models.CharField(choices=[('month', 'Last 30 days'), ('3months', 'Last 90 days'), ('6months', 'Last 180 days')], default='6months', max_length=20)),
-                ('hero', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='tiers', to='hero.hero')),
+                ('hero', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='tiers', to='dota2_turbo_hero.hero')),
             ],
             options={
                 'verbose_name': 'HeroTier',
