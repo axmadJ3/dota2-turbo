@@ -1,5 +1,5 @@
 import requests
-from datetime import datetime, timedelta, timezone as dt_timezone
+from datetime import datetime, timedelta, timezone
 
 from dota2_turbo.authentication.models import SteamUser
 from dota2_turbo.hero.models import Hero, HeroFacet
@@ -14,28 +14,21 @@ def sync_matches_for_player(player_id):
         return 0
 
     url = (
-        f"https://api.opendota.com/api/players/"
-        f"{player.steamid32}/matches?game_mode=23&significant=0"
+        f"https://api.opendota.com/api/players/{player.steamid32}/matches?game_mode=23&date=180&significant=0"
     )
 
-    response = requests.get(url, timeout=2)
+    response = requests.get(url, timeout=10)
     if not response.ok:
-        return 0
+        response.raise_for_status()
 
     matches = response.json()
 
-    cutoff_date = datetime.now(dt_timezone.utc) - timedelta(days=180)
-
-    Match.objects.filter(
-        player=player,
-        match_time__lt=cutoff_date
-    ).delete()
+    cutoff_date = datetime.now(timezone.utc) - timedelta(days=180)
 
     added_count = 0
-
     for m in matches:
         match_time = datetime.fromtimestamp(
-            m["start_time"], tz=dt_timezone.utc
+            m["start_time"], tz=timezone.utc
         )
 
         if match_time < cutoff_date:
@@ -55,11 +48,6 @@ def sync_matches_for_player(player_id):
         except Hero.DoesNotExist:
             continue
 
-        existing_match = Match.objects.filter(
-            match_id=m["match_id"],
-            player=player
-        ).first()
-
         facet_obj = None
         facet_id = m.get("hero_variant")
         if facet_id is not None:
@@ -68,25 +56,26 @@ def sync_matches_for_player(player_id):
                 facet_id=int(facet_id) - 1
             ).first()
 
-        if existing_match:
-            if existing_match.hero_facet is None and facet_obj:
-                existing_match.hero_facet = facet_obj
-                existing_match.save(update_fields=["hero_facet"])
-            continue
-
-        Match.objects.create(
+        obj, created = Match.objects.get_or_create(
             match_id=m["match_id"],
             player=player,
-            hero=hero,
-            hero_facet=facet_obj,
-            kills=m["kills"],
-            deaths=m["deaths"],
-            assists=m["assists"],
-            win=win,
-            rating_change=rating_change,
-            match_time=match_time,
-            duration=m["duration"],
+            defaults={
+                "hero": hero,
+                "hero_facet": facet_obj,
+                "kills": m["kills"],
+                "deaths": m["deaths"],
+                "assists": m["assists"],
+                "win": win,
+                "rating_change": rating_change,
+                "match_time": match_time,
+                "duration": m["duration"],
+            }
         )
-        added_count += 1
+
+        if created:
+            added_count += 1
+        elif obj.hero_facet is None and facet_obj:
+            obj.hero_facet = facet_obj
+            obj.save(update_fields=["hero_facet"])
 
     return added_count

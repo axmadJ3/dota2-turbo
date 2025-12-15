@@ -45,7 +45,7 @@ services:
     container_name: celery-local
     environment:
       - DJANGO_SETTINGS_MODULE=config.settings.dev
-    command: celery -A config worker -l info
+    command: celery -A config worker -l info --concurrency=1
     depends_on:
       - redis
       - db
