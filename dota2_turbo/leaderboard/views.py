@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.db.models import Sum
 from django.db.models.functions import Coalesce
+from django.core.paginator import Paginator
 
 from dota2_turbo.authentication.models import SteamUser
 
@@ -12,8 +13,12 @@ def leaderboard(request):
         )
     ).order_by('-total_rating')
 
+    paginator = Paginator(users, 50)
+    page_number = request.GET.get('page')
+    page = paginator.get_page(page_number)
+
     context = {
-        'users': users,
+        'page': page,
         'title': 'Leaderboard - Dota 2 Turbo Stats'
     }
     return render(

@@ -12,6 +12,7 @@
     --text-secondary: #a8a8a8;
     --text-accent: #d4a574;
     --border-color: #1a2240;
+    --user-row: #252f53;
     --hover-bg: #1a2240;
     --success: #4a7c59;
     --warning: #d4a574;
@@ -391,8 +392,8 @@ html, body {
     transition: background-color 0.3s ease;
 }
 
-.data-table tbody tr:hover, .leaderboard-table tbody tr:hover {
-    background-color: var(--hover-bg);
+.data-table tbody tr:hover, .leaderboard-table tbody tr:hover:not(.user-row) {
+    background-color: transparent;
 }
 
 .data-table tbody td, .leaderboard-table tbody td {
@@ -418,6 +419,37 @@ html, body {
 
 .rating-high {
     color: var(--accent-gold);
+    font-weight: bold;
+}
+
+.user-row {
+    background-color: var(--user-row);
+}
+
+/* ========================================
+   PAGINATION
+   ======================================== */
+
+.pagination {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination a {
+    padding: 6px 10px;
+    border-radius: 6px;
+    background: var(--card-bg);
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.pagination .current {
+    padding: 6px 10px;
+    border-radius: 6px;
+    background: var(--accent-gold-dark);
+    color: var(--text-primary);
     font-weight: bold;
 }
 
