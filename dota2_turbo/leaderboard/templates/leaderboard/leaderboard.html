@@ -34,7 +34,7 @@
                         {% if position == 1 %}🥇{% endif %}
                         {% if position == 2 %}🥈{% endif %}
                         {% if position == 3 %}🥉{% endif %}
-                        {{ position }}
+                        {% if position > 3 %}{{ position }}{% endif %} 
                     </td>
                     <td>{{ user.personaname }}</td>
                     <td class="rating-high">{{ user.total_rating }}</td>
