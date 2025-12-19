@@ -10,3 +10,19 @@ def calculate_tier(winrate):
     else:
         tier = "D"
     return tier
+
+
+POSITIONS = [
+    "All",
+    "Core Safe",
+    "Core Mid",
+    "Core Off",
+    "Support Off",
+    "Support Safe"
+]
+
+PERIODS = [
+    "month",
+    "3months",
+    "6months"
+]

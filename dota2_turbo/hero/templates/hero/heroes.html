@@ -13,6 +13,20 @@
 
 <section class="hero-table-section">
     <div class="container">
+        <div class="filter-bar">
+            <div class="filter-group">
+                <span class="filter-label">Filter by Role:</span>
+                <div class="filter-tags">
+                {% for position in positions %}
+                    <a href="?position={{ position }}">
+                        <span class="tag {% if position == current_position %}active{% endif %}">
+                            {{ position }}
+                        </span>
+                    </a>
+                {% endfor %}
+                </div>
+            </div>
+        </div>
         <table class="hero-table">
             <thead>
                 <tr>

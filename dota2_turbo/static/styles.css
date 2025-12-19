@@ -42,6 +42,10 @@ html, body {
     line-height: 1.6;
 }
 
+a {
+    text-decoration: none;
+}
+
 /* ========================================
    CONTAINER & LAYOUT
    ======================================== */
@@ -245,6 +249,7 @@ html, body {
 /* ========================================
    HEROES SECTION
    ======================================== */
+
 .hero-table-section {
     padding: 2rem 0;
     margin-bottom: 2rem;
@@ -325,6 +330,53 @@ html, body {
 .tier-nr {
     color: var(--text-secondary);
     font-weight: bold;
+}
+
+.filter-bar {
+    background-color: var(--secondary-dark);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 32px;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.filter-label {
+    font-weight: 600;
+    color: var(--accent-gold);
+}
+
+.filter-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    padding: 6px 16px;
+    background-color: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    font-size: 14px;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.tag.active {
+    color: var(--accent-gold);
+    border-color: var(--accent-gold);
+}
+
+.tag:hover {
+    color: var(--accent-gold);
+    border-color: var(--accent-gold);
 }
 
 /* ========================================
