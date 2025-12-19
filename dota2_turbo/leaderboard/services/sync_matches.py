@@ -1,3 +1,11 @@
+"""
+Синхронизация матчей игрока:
+- храним только матчи за последние 180 дней
+- удаляем старые матчи
+- добавляем новые
+- обновляем facet если нет
+"""
+
 import requests
 from datetime import datetime, timedelta, timezone
 
@@ -24,6 +32,8 @@ def sync_matches_for_player(player_id):
     matches = response.json()
 
     cutoff_date = datetime.now(timezone.utc) - timedelta(days=180)
+
+    Match.objects.filter(player=player, match_time__lt=cutoff_date).delete()
 
     added_count = 0
     for m in matches:

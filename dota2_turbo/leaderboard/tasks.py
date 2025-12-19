@@ -28,5 +28,4 @@ def sync_all_players():
     player_ids = SteamUser.objects.values_list("id", flat=True)
 
     for player_id in player_ids:
-        logger.info(f"Send sync task for player {player_id}")
         sync_player_matches.delay(player_id)
