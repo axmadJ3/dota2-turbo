@@ -11,75 +11,30 @@
     </div>
 </section>
 
-<section class="heroes-section">
+<section class="hero-table-section">
     <div class="container">
-        <div class="heroes-grid">
-            <div class="hero-card">
-                <div class="hero-banner" style="background: linear-gradient(135deg, #1a3a52 0%, #0d1f2d 100%);">
-                    <span class="hero-name">Anti-Mage</span>
-                </div>
-                <div class="hero-stats">
-                    <p><strong>Pick Rate:</strong> <span class="stat-high">18.5%</span></p>
-                    <p><strong>Win Rate:</strong> <span class="stat-high">52.3%</span></p>
-                    <p><strong>Ban Rate:</strong> <span class="stat-med">5.2%</span></p>
-                </div>
-            </div>
-
-            <div class="hero-card">
-                <div class="hero-banner" style="background: linear-gradient(135deg, #3d2817 0%, #1f1410 100%);">
-                    <span class="hero-name">Pudge</span>
-                </div>
-                <div class="hero-stats">
-                    <p><strong>Pick Rate:</strong> <span class="stat-high">22.1%</span></p>
-                    <p><strong>Win Rate:</strong> <span class="stat-high">51.8%</span></p>
-                    <p><strong>Ban Rate:</strong> <span class="stat-low">3.1%</span></p>
-                </div>
-            </div>
-
-            <div class="hero-card">
-                <div class="hero-banner" style="background: linear-gradient(135deg, #2d1a3a 0%, #1a0f22 100%);">
-                    <span class="hero-name">Invoker</span>
-                </div>
-                <div class="hero-stats">
-                    <p><strong>Pick Rate:</strong> <span class="stat-high">19.7%</span></p>
-                    <p><strong>Win Rate:</strong> <span class="stat-med">50.2%</span></p>
-                    <p><strong>Ban Rate:</strong> <span class="stat-med">8.5%</span></p>
-                </div>
-            </div>
-
-            <div class="hero-card">
-                <div class="hero-banner" style="background: linear-gradient(135deg, #1a2d3a 0%, #0d1620 100%);">
-                    <span class="hero-name">Tiny</span>
-                </div>
-                <div class="hero-stats">
-                    <p><strong>Pick Rate:</strong> <span class="stat-med">15.3%</span></p>
-                    <p><strong>Win Rate:</strong> <span class="stat-high">53.1%</span></p>
-                    <p><strong>Ban Rate:</strong> <span class="stat-low">2.7%</span></p>
-                </div>
-            </div>
-
-            <div class="hero-card">
-                <div class="hero-banner" style="background: linear-gradient(135deg, #3a1a2d 0%, #1f0d18 100%);">
-                    <span class="hero-name">Void Spirit</span>
-                </div>
-                <div class="hero-stats">
-                    <p><strong>Pick Rate:</strong> <span class="stat-med">14.2%</span></p>
-                    <p><strong>Win Rate:</strong> <span class="stat-med">49.5%</span></p>
-                    <p><strong>Ban Rate:</strong> <span class="stat-low">1.9%</span></p>
-                </div>
-            </div>
-
-            <div class="hero-card">
-                <div class="hero-banner" style="background: linear-gradient(135deg, #1a3a1a 0%, #0d1f0d 100%);">
-                    <span class="hero-name">Nature's Prophet</span>
-                </div>
-                <div class="hero-stats">
-                    <p><strong>Pick Rate:</strong> <span class="stat-med">12.8%</span></p>
-                    <p><strong>Win Rate:</strong> <span class="stat-med">48.9%</span></p>
-                    <p><strong>Ban Rate:</strong> <span class="stat-med">4.3%</span></p>
-                </div>
-            </div>
-        </div>
+        <table class="hero-table">
+            <thead>
+                <tr>
+                    <th>Icon</th>
+                    <th>Name</th>
+                    <th>Winrate</th>
+                    <th>Pickrate</th>
+                    <th>Tier</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for hero_tier in hero_tiers %}
+                <tr>
+                    <td><img src="{{ hero_tier.hero.image_url }}" alt="{{ hero_tier.hero.name }}" class="hero-icon"></td>
+                    <td>{{ hero_tier.hero.name }}</td>
+                    <td class="hero-winrate">{{ hero_tier.winrate }}%</td>
+                    <td class="hero-pickrate">{{ hero_tier.pickrate }}%</td>
+                    <td class="tier-{{ hero_tier.tier|lower }}">{{ hero_tier.tier }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
     </div>
 </section>
 {% endblock %}

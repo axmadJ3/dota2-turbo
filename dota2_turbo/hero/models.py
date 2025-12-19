@@ -10,8 +10,8 @@ class Hero(models.Model):
         verbose_name = "Hero"
         verbose_name_plural = "Heroes"
         indexes = [
-            models.Index(fields=['name']),
-            GinIndex(fields=['positions']),
+            models.Index(fields=["name"]),
+            GinIndex(fields=["positions"]),
         ]
 
     hero_id = models.IntegerField(unique=True)
@@ -31,8 +31,8 @@ class HeroTier(models.Model):
     ]
 
     class Meta:
-        verbose_name = 'HeroTier'
-        verbose_name_plural = 'HeroTiers'
+        verbose_name = "HeroTier"
+        verbose_name_plural = "HeroTiers"
         unique_together = ("hero", "period")
         indexes = [
             models.Index(fields=["period"]),
@@ -45,18 +45,18 @@ class HeroTier(models.Model):
         on_delete=models.CASCADE
     )
     tier = models.CharField(max_length=2)
-    winrate = models.DecimalField(max_digits=5, decimal_places=2, default=Decimal('0.00'))
-    pickrate = models.DecimalField(max_digits=5, decimal_places=2, default=Decimal('0.00'))
-    period = models.CharField(max_length=20, choices=PERIOD_CHOICES, default='6months')
+    winrate = models.DecimalField(max_digits=5, decimal_places=2, default=Decimal("0.00"))
+    pickrate = models.DecimalField(max_digits=5, decimal_places=2, default=Decimal("0.00"))
+    period = models.CharField(max_length=20, choices=PERIOD_CHOICES, default="6months")
 
     def __str__(self):
-        return f"{self.hero.name} — {self.positions}: {self.tier}"
+        return f"{self.hero.name} - {self.period}: {self.tier}"
 
 
 class HeroFacet(models.Model):
     class Meta:
-        verbose_name = 'HeroFacet'
-        verbose_name_plural = 'HeroFacets'
+        verbose_name = "HeroFacet"
+        verbose_name_plural = "HeroFacets"
         unique_together = ("hero", "facet_id")
         indexes = [
             models.Index(fields=["hero"]),
@@ -74,9 +74,9 @@ class HeroFacet(models.Model):
     icon = models.CharField(max_length=50)
     color = models.CharField(max_length=50)
     gradient_id = models.IntegerField(default=0)
-    winrate = models.DecimalField(max_digits=5, decimal_places=2, default=Decimal('0.00'))
-    pickrate = models.DecimalField(max_digits=5, decimal_places=2, default=Decimal('0.00'))
-    tier = models.CharField(max_length=2, default='NR')
+    winrate = models.DecimalField(max_digits=5, decimal_places=2, default=Decimal("0.00"))
+    pickrate = models.DecimalField(max_digits=5, decimal_places=2, default=Decimal("0.00"))
+    tier = models.CharField(max_length=2, default="NR")
 
     def __str__(self):
         return f"{self.hero.name}: facet {self.facet_id} — {self.title}"

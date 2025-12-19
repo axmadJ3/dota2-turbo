@@ -18,6 +18,13 @@
     --warning: #d4a574;
     --danger: #8b3a3a;
     --info: #3a6db5;
+    --tier-s: #7c3aed;
+    --tier-a: #0284c7;
+    --tier-b: #059669;
+    --tier-c: #d97706;
+    --tier-d: #e11d48;
+    --pickrate: #fbbf24;
+    --winrate: #4ade80;
 }
 
 * {
@@ -238,71 +245,86 @@ html, body {
 /* ========================================
    HEROES SECTION
    ======================================== */
-
-.heroes-section {
+.hero-table-section {
     padding: 2rem 0;
+    margin-bottom: 2rem;
 }
 
-.heroes-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 1.5rem;
-}
-
-.hero-card {
+.hero-data-table, .hero-table {
+    width: 100%;
+    border-collapse: collapse;
     background-color: var(--card-bg);
     border: 1px solid var(--border-color);
     border-radius: 8px;
     overflow: hidden;
-    transition: all 0.3s ease;
 }
 
-.hero-card:hover {
-    border-color: var(--accent-gold);
-    transform: translateY(-4px);
+.hero-data-table thead, .hero-table thead {
+    background-color: var(--secondary-dark);
+    border-bottom: 2px solid var(--accent-gold);
 }
 
-.hero-banner {
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.hero-data-table thead th, .hero-table thead th {
+    padding: 1rem;
+    text-align: left;
+    color: var(--accent-gold);  
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.hero-data-table tbody tr, .hero-table tbody tr {
     border-bottom: 1px solid var(--border-color);
+    transition: background-color 0.3s ease;
 }
 
-.hero-name {
-    color: var(--accent-gold);
-    font-size: 1.25rem;
+.hero-data-table tbody td, .hero-table tbody td {
+    padding: 1rem;
+}
+
+.hero-icon {
+    width: 50px;
+    height: 30px;
+    border-radius: 4px;
+}
+
+.hero-winrate {
+    color: var(--winrate);
+}
+
+.hero-pickrate {
+    color: var(--pickrate);
+}
+
+.tier-s {
+    color: var(--tier-s);
     font-weight: bold;
-    letter-spacing: 0.5px;
 }
 
-.hero-stats {
-    padding: 1.5rem;
+.tier-a {
+    color: var(--tier-a);
+    font-weight: bold;
 }
 
-.hero-stats p {
-    margin-bottom: 0.75rem;
-    font-size: 0.95rem;
+.tier-b {
+    color: var(--tier-b);
+    font-weight: bold;
+}
+
+.tier-c {
+    color: var(--tier-c);
+    font-weight: bold;
+}
+
+.tier-d {
+    color: var(--tier-d);
+    font-weight: bold;
+}
+
+.tier-nr {
     color: var(--text-secondary);
-}
-
-.hero-stats strong {
-    color: var(--text-primary);
-}
-
-.stat-high {
-    color: var(--accent-gold);
     font-weight: bold;
-}
-
-.stat-med {
-    color: #c9a355;
-    font-weight: bold;
-}
-
-.stat-low {
-    color: #a8a8a8;
 }
 
 /* ========================================
