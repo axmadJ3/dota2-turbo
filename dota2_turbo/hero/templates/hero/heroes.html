@@ -18,9 +18,23 @@
                 <span class="filter-label">Filter by Role:</span>
                 <div class="filter-tags">
                 {% for position in positions %}
-                    <a href="?position={{ position }}">
+                    <a href="?position={{ position }}&period={{ current_period }}">
                         <span class="tag {% if position == current_position %}active{% endif %}">
                             {{ position }}
+                        </span>
+                    </a>
+                {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="filter-bar">
+            <div class="filter-group">
+                <span class="filter-label">Filter by Date:</span>
+                <div class="filter-tags">
+                {% for period, label  in periods.items %}
+                    <a href="?period={{ period }}&position={{ current_position }}">
+                        <span class="tag {% if period == current_period %}active{% endif %}">
+                            {{ label }}
                         </span>
                     </a>
                 {% endfor %}

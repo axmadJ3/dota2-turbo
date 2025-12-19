@@ -21,8 +21,8 @@ POSITIONS = [
     "Support Safe"
 ]
 
-PERIODS = [
-    "month",
-    "3months",
-    "6months"
-]
+PERIODS = {
+    "month": "Last 30 days",
+    "3months": "Last 90 days",
+    "6months": "Last 180 days"
+}

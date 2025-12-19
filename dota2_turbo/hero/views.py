@@ -17,6 +17,7 @@ def heroes(request):
         "positions": utils.POSITIONS,
         "current_position": position,
         "periods": utils.PERIODS,
+        "current_period": period,
         "title": "Heroes - Dota 2 Turbo Stats"
     }
     return render(
