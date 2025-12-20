@@ -45,10 +45,25 @@
             <thead>
                 <tr>
                     <th>Icon</th>
-                    <th>Name</th>
-                    <th>Winrate</th>
-                    <th>Pickrate</th>
-                    <th>Tier</th>
+                    {% for key, label in sort_headers %}
+                        <th>
+                            {% if current_sort == key %}
+                                {% if current_dir == "asc" %}
+                                    <a href="?position={{ current_position }}&period={{ current_period }}&sort={{ key }}&dir=desc">
+                                        {{ label }} <span class="arrow">▲</span>
+                                    </a>
+                                {% else %}
+                                    <a href="?position={{ current_position }}&period={{ current_period }}&sort={{ key }}&dir=asc">
+                                        {{ label }} <span class="arrow">▼</span>
+                                    </a>
+                                {% endif %}
+                            {% else %}
+                                <a href="?position={{ current_position }}&period={{ current_period }}&sort={{ key }}&dir=desc">
+                                    {{ label }}
+                                </a>
+                            {% endif %}
+                        </th>
+                    {% endfor %}
                 </tr>
             </thead>
             <tbody>

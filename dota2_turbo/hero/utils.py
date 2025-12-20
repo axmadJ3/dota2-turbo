@@ -26,3 +26,17 @@ PERIODS = {
     "3months": "Last 90 days",
     "6months": "Last 180 days"
 }
+
+SORT_MAP = {
+    "winrate": "winrate",
+    "pickrate": "pickrate",
+    "tier": "tier",
+    "name": "hero__name",
+}
+
+SORT_HEADERS = [
+    ("name", "Name"),
+    ("winrate", "Winrate"),
+    ("pickrate", "Pickrate"),
+    ("tier", "Tier"),
+]
