@@ -6,15 +6,14 @@
 {% block content %}
 <section class="page-header">
     <div class="container">
-        <h1 class="page-title">Heroes Statistics</h1>
+        <h1 class="page-title">Facets Statistics</h1>
         <p class="page-subtitle">Complete hero statistics and meta data</p>
     </div>
 </section>
 
 <section class="hero-table-section">
     <div class="container">
-        <div class="filter-row">
-            <div class="filter-bar filter-bar--group">
+        <div class="filter-bar filter-bar--group">
                 <div class="filter-group">
                     <span class="filter-label">GROUP BY:</span>
                     <div class="filter-tags">
@@ -27,28 +26,12 @@
                     </div>
                 </div>
             </div>
-
-            <div class="filter-bar filter-bar--date">
-                <div class="filter-group">
-                    <span class="filter-label">DATE RANGE:</span>
-                    <div class="filter-tags">
-                        {% for period, label in periods.items %}
-                            <a href="?period={{ period }}&position={{ current_position }}">
-                                <span class="tag {% if period == current_period %}active{% endif %}">
-                                    {{ label }}
-                                </span>
-                            </a>
-                        {% endfor %}
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="filter-bar">
             <div class="filter-group">
                 <span class="filter-label">FILTER BY POSITION:</span>
                 <div class="filter-tags">
                 {% for position in positions %}
-                    <a href="?position={{ position }}&period={{ current_period }}">
+                    <a href="?position={{ position }}">
                         <span class="tag {% if position == current_position %}active{% endif %}">
                             {{ position }}
                         </span>
@@ -65,16 +48,16 @@
                         <th>
                             {% if current_sort == key %}
                                 {% if current_dir == "asc" %}
-                                    <a href="?position={{ current_position }}&period={{ current_period }}&sort={{ key }}&dir=desc">
+                                    <a href="?position={{ current_position }}&sort={{ key }}&dir=desc">
                                         {{ label }} <span class="arrow">▲</span>
                                     </a>
                                 {% else %}
-                                    <a href="?position={{ current_position }}&period={{ current_period }}&sort={{ key }}&dir=asc">
+                                    <a href="?position={{ current_position }}&sort={{ key }}&dir=asc">
                                         {{ label }} <span class="arrow">▼</span>
                                     </a>
                                 {% endif %}
                             {% else %}
-                                <a href="?position={{ current_position }}&period={{ current_period }}&sort={{ key }}&dir=desc">
+                                <a href="?position={{ current_position }}&sort={{ key }}&dir=desc">
                                     {{ label }}
                                 </a>
                             {% endif %}

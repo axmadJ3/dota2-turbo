@@ -311,12 +311,27 @@ a {
     font-weight: bold;
 }
 
+.filter-row {
+    display: flex;
+    gap: 15px;
+}
+
 .filter-bar {
     background-color: var(--secondary-dark);
     border: 1px solid var(--border-color);
     border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 32px;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.filter-bar--date {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.filter-bar--group {
+    flex: 0 0 auto;
 }
 
 .filter-group {
@@ -324,6 +339,10 @@ a {
     align-items: center;
     gap: 16px;
     flex-wrap: wrap;
+}
+
+.filter-bar--group .tag.active {
+    background-color: rgba(255, 196, 90, 0.1);
 }
 
 .filter-label {

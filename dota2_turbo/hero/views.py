@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.db.models import When, Case, IntegerField
 
-from dota2_turbo.hero.models import HeroTier
+from dota2_turbo.hero.models import HeroTier, HeroFacet
 from dota2_turbo.hero import utils
 
 def heroes(request):
@@ -36,6 +36,7 @@ def heroes(request):
         hero_tiers = hero_tiers.order_by(order)
 
     context = {
+        "group": "Heroes",
         "hero_tiers": hero_tiers,
         "periods": utils.PERIODS,
         "positions": utils.POSITIONS,
@@ -49,5 +50,18 @@ def heroes(request):
     return render(
         request,
         "hero/heroes.html",
+        context=context 
+    )
+
+
+def facets(request):
+    context = {
+        "group": "Facets",
+        "positions": utils.POSITIONS,
+        "title": "Facets - Dota 2 Turbo Stats"
+    }
+    return render(
+        request,
+        "hero/facets.html",
         context=context 
     )

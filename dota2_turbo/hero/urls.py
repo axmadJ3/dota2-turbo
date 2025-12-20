@@ -7,4 +7,5 @@ app_name = "hero"
 
 urlpatterns = [
     path("heroes/", views.heroes, name="heroes"),
+    path("heroes/facets/", views.facets, name="facets"),
 ]
