@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from django.db.models import When, Case, IntegerField
 
 from dota2_turbo.hero.models import HeroTier, HeroFacet
 from dota2_turbo.hero import utils
@@ -10,30 +9,15 @@ def heroes(request):
     sort = request.GET.get("sort", "winrate")
     direction = request.GET.get("dir", "desc")
 
-    hero_tiers = HeroTier.objects.filter(period=period).select_related("hero")
-
-    if position != "All":
-        hero_tiers = hero_tiers.filter(hero__positions__contains=[position])
-
-    if sort not in utils.SORT_MAP:
-        sort = "winrate"
-    sort_field = utils.SORT_MAP[sort]
-    if sort_field == "tier":
-        hero_tiers = hero_tiers.annotate(
-            tier_order=Case(
-                When(tier="S", then=1),
-                When(tier="A", then=2),
-                When(tier="B", then=3),
-                When(tier="C", then=4),
-                When(tier="D", then=5),
-                output_field=IntegerField(),
-            )
-        )
-        order = "-tier_order" if direction == "desc" else "tier_order"
-        hero_tiers = hero_tiers.order_by(order)
-    else:
-        order = f"-{sort_field}" if direction == "desc" else sort_field
-        hero_tiers = hero_tiers.order_by(order)
+    qs = HeroTier.objects.select_related("hero")
+    hero_tiers = utils.common_filters(
+        qs,
+        period=period,
+        position=position,
+        sort=sort,
+        direction=direction,
+        sort_map=utils.SORT_MAP,
+    )
 
     context = {
         "group": "Heroes",
@@ -55,9 +39,27 @@ def heroes(request):
 
 
 def facets(request):
+    position = request.GET.get("position", "All")
+    sort = request.GET.get("sort", "winrate")
+    direction = request.GET.get("dir", "desc")
+
+    qs = HeroFacet.objects.exclude(tier="NR").select_related("hero")
+    hero_facets = utils.common_filters(
+        qs,
+        position=position,
+        sort=sort,
+        direction=direction,
+        sort_map=utils.SORT_MAP,
+    )
+
     context = {
         "group": "Facets",
+        "hero_facets": hero_facets,
         "positions": utils.POSITIONS,
+        "facet_sort_headers": utils.FACET_SORT_HEADERS,
+        "current_dir": direction,
+        "current_sort": sort,
+        "current_position": position,
         "title": "Facets - Dota 2 Turbo Stats"
     }
     return render(

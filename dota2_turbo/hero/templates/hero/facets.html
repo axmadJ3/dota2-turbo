@@ -43,8 +43,7 @@
         <table class="hero-table">
             <thead>
                 <tr>
-                    <th>Icon</th>
-                    {% for key, label in sort_headers %}
+                    {% for key, label in facet_sort_headers %}
                         <th>
                             {% if current_sort == key %}
                                 {% if current_dir == "asc" %}
@@ -66,13 +65,38 @@
                 </tr>
             </thead>
             <tbody>
-            {% for hero_tier in hero_tiers %}
+            {% for hero_facet in hero_facets %}
                 <tr>
-                    <td><img src="{{ hero_tier.hero.image_url }}" alt="{{ hero_tier.hero.name }}" class="hero-icon"></td>
-                    <td>{{ hero_tier.hero.name }}</td>
-                    <td class="hero-winrate">{{ hero_tier.winrate }}%</td>
-                    <td class="hero-pickrate">{{ hero_tier.pickrate }}%</td>
-                    <td class="tier-{{ hero_tier.tier|lower }}">{{ hero_tier.tier }}</td>
+                    <td>
+                        <div class="hero-cell">
+                            <div class="hero-icon-wrapper">
+                                <img
+                                    src="{{ hero_facet.hero.image_url }}"
+                                    alt="{{ hero_facet.hero.name }}"
+                                    class="hero-icon"
+                                >
+                                <div class="facet-badge-wrapper color-{{ hero_facet.color|lower }}">
+                                    <img
+                                        src="https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/icons/facets/{{ hero_facet.icon }}.png"
+                                        alt="{{ hero_facet.title }}"
+                                        title="{{ hero_facet.description }}"
+                                    >
+                                </div>
+                            </div>
+                            <div class="hero-text">
+                                <span class="facet-name facet-color-{{ hero_facet.color }}"
+                                    title="{{ hero_facet.description }}">
+                                    {{ hero_facet.title }}
+                                </span>
+                                <span class="hero-sub">
+                                    {{ hero_facet.hero.name }}
+                                </span>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="hero-winrate">{{ hero_facet.winrate }}%</td>
+                    <td class="hero-pickrate">{{ hero_facet.pickrate }}%</td>
+                    <td class="tier-{{ hero_facet.tier|lower }}">{{ hero_facet.tier }}</td>
                 </tr>
             {% endfor %}
             </tbody>

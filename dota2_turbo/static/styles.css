@@ -267,10 +267,127 @@ a {
     padding: 1rem;
 }
 
+.hero-cell {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.hero-icon-wrapper {
+    position: relative;
+    width: 50px;
+    height: 30px;
+    flex-shrink: 0;
+}
+
 .hero-icon {
     width: 50px;
     height: 30px;
     border-radius: 4px;
+    display: block;
+}
+
+.hero-facet-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.facet-badge-wrapper {
+    position: absolute;
+    bottom: -6px;
+    right: -8px;
+    width: 22px;
+    height: 22px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow:
+        0 0 6px rgba(0,0,0,0.5),
+        inset 0 0 6px rgba(255,255,255,0.15);
+}
+
+.facet-badge-wrapper::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 6px;
+    opacity: 0.65;
+    z-index: 0;
+}
+
+.facet-badge-wrapper img {
+    width: 16px;
+    height: 16px;
+    position: relative;
+    z-index: 1;
+}
+
+.facet-name {
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.facet-color-blue {
+    background: rgba(0, 122, 255, 0.25);
+    color: #68a8ff;
+}
+.facet-color-yellow {
+    background: rgba(255, 215, 0, 0.25);
+    color: #e8d46b;
+}
+.facet-color-red {
+    background: rgba(255, 80, 80, 0.25);
+    color: #ff6d6d;
+}
+.facet-color-green {
+    background: rgba(60, 179, 113, 0.25);
+    color: #7ddf9f;
+}
+.facet-color-purple {
+    background: rgba(128, 0, 255, 0.25);
+    color: #c293ff;
+}
+.facet-color-gray {
+    background: rgba(128, 128, 128, 0.25);
+    color: #bfbfbf;
+}
+
+.color-purple::before {
+    background: linear-gradient(145deg, #b988c3, #7b4d88);
+}
+.color-yellow::before {
+    background: linear-gradient(145deg, #ffe08a, #c6a539);
+}
+.color-red::before {
+    background: linear-gradient(145deg, #ff9a9a, #b94b4b);
+}
+.color-blue::before {
+    background: linear-gradient(145deg, #87baff, #3d6fb3);
+}
+.color-gray::before {
+    background: linear-gradient(145deg, #cfcfcf, #8e8e8e);
+}
+.color-green::before {
+    background: linear-gradient(145deg, #9ee6b1, #4a9b57);
+}
+
+.hero-sub {
+    font-size: 12px;
+    color: #bbb;
+    padding-left: 8px;
+}
+
+.hero-text {
+    display: flex;
+    padding-left: 4px;
+    flex-direction: column;
+    gap: 4px;
+    line-height: 1.1;
 }
 
 .hero-winrate {
