@@ -60,7 +60,6 @@
         <table class="hero-table">
             <thead>
                 <tr>
-                    <th>Icon</th>
                     {% for key, label in sort_headers %}
                         <th>
                             {% if current_sort == key %}
@@ -85,8 +84,14 @@
             <tbody>
             {% for hero_tier in hero_tiers %}
                 <tr>
-                    <td><img src="{{ hero_tier.hero.image_url }}" alt="{{ hero_tier.hero.name }}" class="hero-icon"></td>
-                    <td>{{ hero_tier.hero.name }}</td>
+                    <td>
+                        <div class="hero-cell">
+                            <img src="{{ hero_tier.hero.image_url }}"
+                                alt="{{ hero_tier.hero.name }}"
+                                class="hero-icon">
+                            <span class="hero-name">{{ hero_tier.hero.name }}</span>
+                        </div>
+                    </td>
                     <td class="hero-winrate">{{ hero_tier.winrate }}%</td>
                     <td class="hero-pickrate">{{ hero_tier.pickrate }}%</td>
                     <td class="tier-{{ hero_tier.tier|lower }}">{{ hero_tier.tier }}</td>
