@@ -50,9 +50,17 @@ def update_heroes_stats():
 
             games = stats["games"]
             wins = stats["wins"]
-            winrate = (Decimal(wins) / Decimal(games) * 100).quantize(Decimal("0.01"))
-            pickrate = (Decimal(games) / Decimal(total_matches) * 100).quantize(Decimal("0.01"))
+
+            winrate = (
+                Decimal(wins) / Decimal(games) * 100
+            ).quantize(Decimal("0.01"))
+
+            pickrate = (
+                Decimal(games) / Decimal(total_matches) * 100
+            ).quantize(Decimal("0.01"))
+
             tier = calculate_tier(winrate)
+
             HeroTier.objects.update_or_create(
                 hero=hero,
                 period=period,
