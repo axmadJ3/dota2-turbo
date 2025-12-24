@@ -57,7 +57,10 @@ def update_heroes_facets():
             Decimal(games) / Decimal(hero_games) * 100
         ).quantize(Decimal("0.01"))
 
-        tier = calculate_tier(winrate)
+        if games < 10:
+            tier = "NR"
+        else:
+            tier = calculate_tier(winrate)
 
         HeroFacet.objects.update_or_create(
             hero_id=hero_id,
