@@ -1,0 +1,181 @@
+{% extends "base.html" %}
+{% load static %}
+{% load custom_filters %}
+
+{% block statistics-active %} active {% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <h1 class="page-title">Game Statistics</h1>
+        <p class="page-subtitle">Current meta analytics and trends</p>
+    </div>
+</section>
+
+<!-- Stats Cards -->
+<section class="stats-cards-section">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">🎮</div>
+                <h3>Total Games</h3>
+                <p class="stat-value">639</p>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">👥</div>
+                <h3>Wins</h3>
+                <p class="stat-value">450</p>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🏆</div>
+                <h3>Losses</h3>
+                <p class="stat-value">345</p>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">📊</div>
+                <h3>Winrate</h3>
+                <p class="stat-value">51%</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Items Meta Table -->
+<section class="table-section">
+    <div class="container">
+        <div class="filter-row">
+            <div class="filter-bar filter-bar--group">
+                <div class="filter-group">
+                    <span class="filter-label">GROUP BY:</span>
+                    <div class="filter-tags">
+                        <a href="?group=matches">
+                            <span class="tag {% if group == 'matches' %}active{% endif %}">Matches</span>
+                        </a>
+                        <a href="?group=heroes">
+                            <span class="tag {% if group == 'heroes' %}active{% endif %}">Heroes Stats</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2 class="section-title">{{ group|capfirst }}</h2>
+        {% if group == "matches" %}
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Hero</th>
+                    <th>Result</th>
+                    <th>Duration</th>
+                    <th>K/D/A</th>
+                    <th>Rating</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for match in page.object_list %}
+                <tr>
+                    <td>
+                        <div class="hero-cell">
+                            <div class="hero-icon-wrapper">
+                                <img
+                                    src="{{ match.hero.image_url }}"
+                                    alt="{{ match.hero.name }}"
+                                    class="hero-icon"
+                                >
+                                <div class="facet-badge-wrapper color-{{ match.hero_facet.color|lower }}">
+                                    <img
+                                        src="https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/icons/facets/{{ match.hero_facet.icon }}.png"
+                                        alt="{{ match.hero_facet.title }}"
+                                        title="{{ match.hero_facet.description }}"
+                                    >
+                                </div>
+                            </div>
+                            <div class="hero-text">
+                                <span class="facet-name facet-color-{{ match.hero_facet.color }}"
+                                    title="{{ match.hero_facet.description }}">
+                                    {{ match.hero_facet.title }}
+                                </span>
+                                <span class="hero-sub">
+                                    {{ match.hero.name }}
+                                </span>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                    {% if match.win %}
+                        <span class="text-green">Win</span>
+                    {% else %}
+                        <span class="text-red">Lose</span>
+                    {% endif %}
+                    </td>
+                    <td>{{ match.duration|mmss }}</td>
+                    <td class="kda">
+                        <span class="k">{{ match.kills }}</span>/
+                        <span class="d">{{ match.deaths }}</span>/
+                        <span class="a">{{ match.assists }}</span>
+                    </td>
+                    <td>{{ match.rating_change }}</td>
+                    <td>{{ match.match_time|date:"Y-m-d" }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Hero</th>
+                    <th>Games</th>
+                    <th>Wins</th>
+                    <th>With Games</th>
+                    <th>With Wins</th>
+                    <th>Against Games</th>
+                    <th>Against Wins</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for hero in page.object_list %}
+                <tr>
+                    <td>
+                        <div class="hero-cell">
+                            <img src="{{ hero.hero.image_url }}"
+                                alt="{{ hero.hero.name }}"
+                                class="hero-icon">
+                            <span class="hero-name">{{ hero.hero.name }}</span>
+                        </div>
+                    </td>
+                    <td>{{ hero.games }}</td>
+                    <td>{{ hero.win }}</td>
+                    <td>{{ hero.with_games }}</td>
+                    <td>{{ hero.with_win }}</td>
+                    <td>{{ hero.against_games }}</td>
+                    <td>{{ hero.against_win }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% endif %}
+    </div>
+    <div class="pagination">
+    {% if page.has_previous %}
+        <a href="?group={{ group }}&page=1">&laquo;</a>
+        <a href="?group={{ group }}&page={{ page.previous_page_number }}">←</a>
+    {% endif %}
+
+    {% for num in page.paginator.page_range %}
+        {% if num >= page.number|add:-2 and num <= page.number|add:2 %}
+            {% if num == page.number %}
+                <span class="current">{{ num }}</span>
+            {% else %}
+                <a href="?group={{ group }}&page={{ num }}">{{ num }}</a>
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+
+    {% if page.has_next %}
+        <a href="?group={{ group }}&page={{ page.next_page_number }}">→</a>
+        <a href="?group={{ group }}&page={{ page.paginator.num_pages }}">&raquo;</a>
+    {% endif %}
+    </div>
+</section>
+{% endblock content %}

@@ -18,14 +18,20 @@
                     <span class="logo-text">Dota 2 Turbo</span>
                 </div>
                 <nav class="nav">
-                    <a href={% url "leaderboard:leaderboard" %} class="nav-link {% block leaderboard-active %} {% endblock %}">Leaderboard</a>
-                    <a href={% url "hero:heroes" %} class="nav-link {% block heroes-active %} {% endblock %}">Heroes</a>
-                    <a href="statistics.html" class="nav-link">Statistics</a>
-                    <a href="{% url "leaderboard:about" %}" class="nav-link {% block about-active %} {% endblock %}">About</a>
+                    <a href="{% url 'leaderboard:leaderboard' %}" class="nav-link {% block leaderboard-active %} {% endblock %}">
+                        Leaderboard
+                    </a>
+                    <a href="{% url 'hero:heroes' %}" class="nav-link {% block heroes-active %} {% endblock %}">Heroes</a>
+                    <a href="{% url 'leaderboard:about' %}" class="nav-link {% block about-active %} {% endblock %}">About</a>
                     {% if request.user.is_authenticated %}
-                        <a href={% url "auth:logout" %} class="nav-button">Log out</a>
+                        <a href="{% url 'player:player' request.user.steamid32 %}?group=matches" class="nav-link {% block statistics-active %} {% endblock %}">
+                            {{request.user.personaname}}
+                        </a>
+                    {% endif %}
+                    {% if request.user.is_authenticated %}
+                        <a href="{% url 'auth:logout' %}" class="nav-button">Log out</a>
                     {% else %}
-                        <a href={% url "social:begin" "steam" %} class="nav-button">Auth via Steam</a>
+                        <a href="{% url 'social:begin' 'steam' %}" class="nav-button">Auth via Steam</a>
                     {% endif %}
                 </nav>
             </div>

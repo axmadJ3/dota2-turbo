@@ -23,6 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('dota2_turbo.leaderboard.urls', namespace='leaderboard')),
     path('', include('dota2_turbo.hero.urls', namespace='hero')),
+    path('', include('dota2_turbo.player.urls', namespace='player')),
     path('auth/', include('dota2_turbo.authentication.urls', namespace='auth')),
     path('social/', include('social_django.urls', namespace="social")),
 ]

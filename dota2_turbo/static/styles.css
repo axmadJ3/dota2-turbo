@@ -549,6 +549,33 @@ a {
     font-weight: bold;
 }
 
+.text-green {
+    color: var(--success);
+    font-weight: bold;
+}
+
+.text-red {
+    color: var(--danger);
+    font-weight: bold;
+}
+
+.kda {
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.k {
+    color: var(--success);
+}
+
+.d {
+    color: var(--danger);
+}
+
+.a {
+    color: var(--info);
+}
+
 /* ========================================
    TABLE SECTION
    ======================================== */
