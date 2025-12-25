@@ -60,25 +60,25 @@
         <table class="hero-table">
             <thead>
                 <tr>
-                    {% for key, label in sort_headers %}
-                        <th>
-                            {% if current_sort == key %}
-                                {% if current_dir == "asc" %}
-                                    <a href="?position={{ current_position }}&period={{ current_period }}&sort={{ key }}&dir=desc">
-                                        {{ label }} <span class="arrow">▲</span>
-                                    </a>
-                                {% else %}
-                                    <a href="?position={{ current_position }}&period={{ current_period }}&sort={{ key }}&dir=asc">
-                                        {{ label }} <span class="arrow">▼</span>
-                                    </a>
-                                {% endif %}
-                            {% else %}
+                {% for key, label in sort_headers %}
+                    <th>
+                        {% if current_sort == key %}
+                            {% if current_dir == "asc" %}
                                 <a href="?position={{ current_position }}&period={{ current_period }}&sort={{ key }}&dir=desc">
-                                    {{ label }}
+                                    {{ label }} <span class="arrow">▲</span>
+                                </a>
+                            {% else %}
+                                <a href="?position={{ current_position }}&period={{ current_period }}&sort={{ key }}&dir=asc">
+                                    {{ label }} <span class="arrow">▼</span>
                                 </a>
                             {% endif %}
-                        </th>
-                    {% endfor %}
+                        {% else %}
+                            <a href="?position={{ current_position }}&period={{ current_period }}&sort={{ key }}&dir=desc">
+                                {{ label }}
+                            </a>
+                        {% endif %}
+                    </th>
+                {% endfor %}
                 </tr>
             </thead>
             <tbody>

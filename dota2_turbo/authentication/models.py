@@ -64,3 +64,7 @@ class SteamUser(AbstractBaseUser, PermissionsMixin):
             except (ValueError, TypeError):
                 self.steamid32 = None
         super().save(*args, **kwargs)
+
+    def __str__(self):
+        return self.personaname
+    
