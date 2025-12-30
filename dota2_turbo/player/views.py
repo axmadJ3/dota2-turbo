@@ -28,7 +28,7 @@ def player_stats(request, steamid32):
                 .order_by("-match_id")
             )
             matches = list(matches)
-            cache.set(cache_key, matches, timeout=3600)
+            cache.set(cache_key, matches, timeout=1800)
         paginator = Paginator(matches, 50)
 
     elif group == "heroes":
@@ -47,7 +47,7 @@ def player_stats(request, steamid32):
                     -(x.last_played.timestamp() if x.last_played else 0)
                 )
             )
-            cache.set(cache_key, hero_stats, timeout=3600)
+            cache.set(cache_key, hero_stats, timeout=1800)
         paginator = Paginator(hero_stats, 50)
 
     else:

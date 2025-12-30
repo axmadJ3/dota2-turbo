@@ -14,7 +14,7 @@ from dota2_turbo.hero.models import Hero, HeroTier
 from dota2_turbo.leaderboard.models import Match
 
 
-def update_heroes_stats():
+def update_stats():
     PERIODS = {
         "month": 30,
         "3months": 90,

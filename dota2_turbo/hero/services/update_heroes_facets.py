@@ -13,7 +13,7 @@ from dota2_turbo.hero.models import HeroFacet
 from dota2_turbo.leaderboard.models import Match
 
 
-def update_heroes_facets():
+def update_facets():
     updated = 0
 
     matches = Match.objects.filter(hero_facet__isnull=False)

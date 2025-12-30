@@ -15,7 +15,7 @@ from dota2_turbo.leaderboard.models import Match
 from dota2_turbo.leaderboard.utils import calculate_rating_change
 
 
-def sync_matches_for_player(player_id):
+def update_matches(player_id):
     try:
         player = SteamUser.objects.get(id=player_id)
     except SteamUser.DoesNotExist:

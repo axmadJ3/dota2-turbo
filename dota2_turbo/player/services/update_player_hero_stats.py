@@ -14,7 +14,7 @@ from dota2_turbo.player.models import PlayerHeroStats
 
 logger = logging.getLogger(__name__)
 
-def sync_user_hero_stats(steamid32):
+def update_hero_stats(steamid32):
     try:
         player = SteamUser.objects.get(steamid32=steamid32)
     except SteamUser.DoesNotExist:
