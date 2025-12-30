@@ -1,4 +1,4 @@
-from datetime import timezone, datetime
+from datetime import datetime, timezone
 
 from django.core.cache import cache
 from django.core.paginator import Paginator
@@ -9,7 +9,7 @@ from django.shortcuts import redirect
 from dota2_turbo.authentication.models import SteamUser
 from dota2_turbo.leaderboard.models import Match
 from dota2_turbo.player.models import PlayerHeroStats
-from dota2_turbo.player.tasks import update_player_hero_stats
+from dota2_turbo.player.tasks import update_player_hero_stats, update_player_match_history
 
 
 def player_stats(request, steamid32):
@@ -20,22 +20,35 @@ def player_stats(request, steamid32):
 
     if group == "matches":
         cache_key = f"player_matches_{player.steamid32}"
+        cache_timestamp_key = f"player_matches_ts_{player.steamid32}"
+        
         matches = cache.get(cache_key)
+        last_update = cache.get(cache_timestamp_key)
+        
+        if matches is None or not last_update or (datetime.now(timezone.utc).timestamp() - last_update > 1800):
+            update_player_match_history.delay(player.id)
+        
         if matches is None:
-            matches = (
+            matches = list(
                 Match.objects.filter(player=player)
                 .select_related("hero", "hero_facet")
                 .order_by("-match_id")
             )
-            matches = list(matches)
             cache.set(cache_key, matches, timeout=1800)
+            cache.set(cache_timestamp_key, datetime.now(timezone.utc).timestamp(), timeout=1800)
+        
         paginator = Paginator(matches, 50)
 
     elif group == "heroes":
         cache_key = f"player_heroes_{player.steamid32}"
-        cache.delete(cache_key)
-        update_player_hero_stats.delay(player.steamid32)
+        cache_timestamp_key = f"player_heroes_ts_{player.steamid32}"
+        
         hero_stats = cache.get(cache_key)
+        last_update = cache.get(cache_timestamp_key)
+        
+        if hero_stats is None or not last_update or (datetime.now(timezone.utc).timestamp() - last_update > 1800):
+            update_player_hero_stats.delay(player.steamid32)
+        
         if hero_stats is None:
             hero_stats = list(
                 PlayerHeroStats.objects.filter(player=player)
@@ -48,6 +61,8 @@ def player_stats(request, steamid32):
                 )
             )
             cache.set(cache_key, hero_stats, timeout=1800)
+            cache.set(cache_timestamp_key, datetime.now(timezone.utc).timestamp(), timeout=1800)
+        
         paginator = Paginator(hero_stats, 50)
 
     else:
