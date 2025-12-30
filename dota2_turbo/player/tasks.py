@@ -54,7 +54,7 @@ def update_player_match_history(player_id):
         matches = list(
             Match.objects.filter(player=player)
             .select_related("hero", "hero_facet")
-            .order_by("-match_id")
+            .order_by("-match_time")
         )
         
         cache_key = f"player_matches_{player.steamid32}"

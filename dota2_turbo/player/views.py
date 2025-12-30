@@ -32,7 +32,7 @@ def player_stats(request, steamid32):
             matches = list(
                 Match.objects.filter(player=player)
                 .select_related("hero", "hero_facet")
-                .order_by("-match_id")
+                .order_by("-match_time")
             )
             cache.set(cache_key, matches, timeout=1800)
             cache.set(cache_timestamp_key, datetime.now(timezone.utc).timestamp(), timeout=1800)
