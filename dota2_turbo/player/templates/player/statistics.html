@@ -17,17 +17,19 @@
     <div class="container">
         <div class="stats-grid">
             <div class="stat-card">
-                <div class="stat-icon">🎮</div>
+                <div class="stat-icon">
+                    <img class="user-avatar" src="{{ request.user.avatarfull }}" alt="{{ request.user.personaname }}">
+                </div>
                 <h3>Total Games</h3>
                 <p class="stat-value">639</p>
             </div>
             <div class="stat-card">
-                <div class="stat-icon">👥</div>
+                <div class="stat-icon">📈</div>
                 <h3>Wins</h3>
                 <p class="stat-value">450</p>
             </div>
             <div class="stat-card">
-                <div class="stat-icon">🏆</div>
+                <div class="stat-icon">📉</div>
                 <h3>Losses</h3>
                 <p class="stat-value">345</p>
             </div>
