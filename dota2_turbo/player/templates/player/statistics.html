@@ -18,25 +18,25 @@
         <div class="stats-grid">
             <div class="stat-card">
                 <div class="stat-icon">
-                    <img class="user-avatar" src="{{ request.user.avatarfull }}" alt="{{ request.user.personaname }}">
+                    <img class="user-avatar" src="{{ player.avatarfull }}" alt="{{ player.personaname }}">
                 </div>
                 <h3>Total Games</h3>
-                <p class="stat-value">639</p>
+                <p class="stat-value">{{ player_stats.games }}</p>
             </div>
             <div class="stat-card">
                 <div class="stat-icon">📈</div>
                 <h3>Wins</h3>
-                <p class="stat-value">450</p>
+                <p class="stat-value">{{ player_stats.wins }}</p>
             </div>
             <div class="stat-card">
                 <div class="stat-icon">📉</div>
                 <h3>Losses</h3>
-                <p class="stat-value">345</p>
+                <p class="stat-value">{{ player_stats.losses }}</p>
             </div>
             <div class="stat-card">
                 <div class="stat-icon">📊</div>
                 <h3>Winrate</h3>
-                <p class="stat-value">51%</p>
+                <p class="stat-value">{{ player_stats.winrate }}%</p>
             </div>
         </div>
     </div>

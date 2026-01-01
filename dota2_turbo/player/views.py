@@ -5,6 +5,7 @@ from django.core.paginator import Paginator
 from django.shortcuts import render
 from django.shortcuts import get_object_or_404
 from django.shortcuts import redirect
+from django.db.models import Count, Q
 
 from dota2_turbo.authentication.models import SteamUser
 from dota2_turbo.leaderboard.models import Match
@@ -16,7 +17,25 @@ def player_stats(request, steamid32):
     group = request.GET.get("group", "matches")
     player = get_object_or_404(SteamUser, steamid32=steamid32)
 
-    context = {"group": group, "player": player, "title": "Game Statistics"}
+    matches = Match.objects.filter(player=player)
+    player_stats = (
+        matches
+        .aggregate(
+            games=Count("id"),
+            wins=Count("id", filter=Q(win=True)),
+            losses=Count("id", filter=Q(win=False)),
+        )
+    )
+    player_stats['winrate'] = round(
+        (player_stats['wins'] / player_stats['games']) * 100, 1
+    ) if player_stats['games'] > 0 else 0
+
+    context = {
+        "group": group,
+        "player": player,
+        "player_stats": player_stats,
+        "title": "Game Statistics"
+    }
 
     if group == "matches":
         cache_key = f"player_matches_{player.steamid32}"
@@ -75,5 +94,5 @@ def player_stats(request, steamid32):
     return render(
         request, 
         "player/statistics.html", 
-        context
+        context=context
     )
