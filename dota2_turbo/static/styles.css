@@ -505,8 +505,9 @@ a {
    ======================================== */
 
 .stats-cards-section {
-    padding: 2rem 0;
-    margin-bottom: 3rem;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
 }
 
 .stats-grid {
