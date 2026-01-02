@@ -45,11 +45,7 @@
                                     <input type="hidden" name="next" value="{{ request.path }}">
 
                                     <button type="submit" class="dropdown-item">
-                                        <img
-                                            src="{% static 'img/flags/' %}{{ code }}.svg"
-                                            class="lang-flag"
-                                            alt="{{ name }}"
-                                        >
+                                        <img src="{% static 'img/flags/' %}{{ code }}.svg" class="lang-flag" alt="{{ name }}"/>
                                         <span class="lang-text">{{ name }}</span>
                                     </button>
                                 </form>
