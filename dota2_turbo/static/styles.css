@@ -53,9 +53,9 @@ a {
    ======================================== */
 
 .container {
-    max-width: 1200px;
+    max-width: min(1200px, 95vw);
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 clamp(1rem, 4vw, 20px);
 }
 
 /* ========================================
@@ -255,7 +255,7 @@ a {
 }
 
 .page-title {
-    font-size: 2.5rem;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
     color: var(--accent-gold);
     font-weight: bold;
     margin-bottom: 0.5rem;
@@ -268,7 +268,7 @@ a {
 }
 
 .section-title {
-    font-size: 1.75rem;
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
     color: var(--accent-gold);
     font-weight: bold;
     margin-bottom: 2rem;
