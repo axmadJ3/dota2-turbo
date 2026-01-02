@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -19,19 +20,50 @@
                 </div>
                 <nav class="nav">
                     <a href="{% url 'leaderboard:leaderboard' %}" class="nav-link {% block leaderboard-active %} {% endblock %}">
-                        Leaderboard
+                        {% trans "Leaderboard" %}
                     </a>
-                    <a href="{% url 'hero:heroes' %}" class="nav-link {% block heroes-active %} {% endblock %}">Heroes</a>
-                    <a href="{% url 'leaderboard:about' %}" class="nav-link {% block about-active %} {% endblock %}">About</a>
+                    <a href="{% url 'hero:heroes' %}" class="nav-link {% block heroes-active %} {% endblock %}">
+                        {% trans "Heroes" %}
+                    </a>
+                    <a href="{% url 'leaderboard:about' %}" class="nav-link {% block about-active %} {% endblock %}">
+                        {% trans "About" %}
+                    </a>
                     {% if request.user.is_authenticated %}
                         <a href="{% url 'player:player' request.user.steamid32 %}?group=matches" class="nav-link {% block statistics-active %} {% endblock %}">
                             {{request.user.personaname}}
                         </a>
                     {% endif %}
+                    <div class="dropdown">
+                        <button class="nav-link dropdown-toggle">
+                            <img src="{% static 'img/icons/language.png' %}" class="flag-icon" alt="Language Flag"/>
+                        </button>
+                        <div class="dropdown-menu">
+                            {% for code, name in LANGUAGES %}
+                                <form method="post" action="{% url 'set_language' %}">
+                                    {% csrf_token %}
+                                    <input type="hidden" name="language" value="{{ code }}">
+                                    <input type="hidden" name="next" value="{{ request.path }}">
+
+                                    <button type="submit" class="dropdown-item">
+                                        <img
+                                            src="{% static 'img/flags/' %}{{ code }}.svg"
+                                            class="lang-flag"
+                                            alt="{{ name }}"
+                                        >
+                                        <span class="lang-text">{{ name }}</span>
+                                    </button>
+                                </form>
+                            {% endfor %}
+                        </div>
+                    </div>
                     {% if request.user.is_authenticated %}
-                        <a href="{% url 'auth:logout' %}" class="nav-button">Log out</a>
+                        <a href="{% url 'auth:logout' %}" class="nav-button">
+                            {% trans "Log out" %}
+                        </a>
                     {% else %}
-                        <a href="{% url 'social:begin' 'steam' %}" class="nav-button">Auth via Steam</a>
+                        <a href="{% url 'social:begin' 'steam' %}" class="nav-button">
+                            {% trans "Auth via Steam" %}
+                        </a>
                     {% endif %}
                 </nav>
             </div>

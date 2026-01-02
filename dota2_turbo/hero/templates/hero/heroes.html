@@ -1,13 +1,18 @@
 {% extends "base.html" %}
 {% load static %}
+{% load i18n %}
 
 {% block heroes-active %} active {% endblock %}
 
 {% block content %}
 <section class="page-header">
     <div class="container">
-        <h1 class="page-title">Heroes Statistics</h1>
-        <p class="page-subtitle">Hero statistics for the past 180 days</p>
+        <h1 class="page-title">
+            {% trans "Heroes Statistics" %}
+        </h1>
+        <p class="page-subtitle">
+            {% trans "Hero statistics for the past 180 days" %}
+        </p>
     </div>
 </section>
 
@@ -16,13 +21,19 @@
         <div class="filter-row">
             <div class="filter-bar filter-bar--group">
                 <div class="filter-group">
-                    <span class="filter-label">GROUP BY:</span>
+                    <span class="filter-label">
+                        {% trans "GROUP BY:" %}
+                    </span>
                     <div class="filter-tags">
                         <a href="{% url "hero:heroes" %}">
-                            <span class="tag {% if group == "Heroes" %}active{% endif %}">Heroes</span>
+                            <span class="tag {% if group == "Heroes" %}active{% endif %}">
+                                {% trans "Heroes" %}
+                            </span>
                         </a>
                         <a href="{% url "hero:facets" %}">
-                            <span class="tag {% if group == "Facets" %}active{% endif %}">Facets</span>
+                            <span class="tag {% if group == "Facets" %}active{% endif %}">
+                                {% trans "Facets" %}
+                            </span>
                         </a>
                     </div>
                 </div>
@@ -30,7 +41,9 @@
 
             <div class="filter-bar filter-bar--date">
                 <div class="filter-group">
-                    <span class="filter-label">DATE RANGE:</span>
+                    <span class="filter-label">
+                        {% trans "DATE RANGE:" %}
+                    </span>
                     <div class="filter-tags">
                         {% for period, label in periods.items %}
                             <a href="?period={{ period }}&position={{ current_position }}">
@@ -45,7 +58,9 @@
         </div>
         <div class="filter-bar">
             <div class="filter-group">
-                <span class="filter-label">FILTER BY POSITION:</span>
+                <span class="filter-label">
+                    {% trans "FILTER BY POSITION:" %}
+                </span>
                 <div class="filter-tags">
                 {% for position in positions %}
                     <a href="?position={{ position }}&period={{ current_period }}">

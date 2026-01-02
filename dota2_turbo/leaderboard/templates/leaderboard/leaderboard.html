@@ -1,13 +1,18 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
 
 {% block leaderboard-active %} active {% endblock %}
 
 {% block content %}
 <section class="page-header">
     <div class="container">
-        <h1 class="page-title">Leaderboard</h1>
-        <p class="page-subtitle">Only Turbo matches from the past 180 days contribute to the rating</p>
+        <h1 class="page-title">
+            {% trans "Leaderboard" %}
+        </h1>
+        <p class="page-subtitle">
+            {% trans "Only Turbo matches from the past 180 days contribute to the rating" %}
+        </p>
     </div>
 </section>
 
@@ -16,9 +21,9 @@
         <table class="leaderboard-table">
             <thead>
                 <tr>
-                    <th>Position</th>
-                    <th>Nickname</th>
-                    <th>Rating</th>
+                    <th>{% trans "Position" %}</th>
+                    <th>{% trans "Nickname" %}</th>
+                    <th>{% trans "Rating" %}</th>
                 </tr>
             </thead>
             <tbody>

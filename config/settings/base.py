@@ -76,6 +76,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.i18n',
                 'social_django.context_processors.backends',
                 'social_django.context_processors.login_redirect',
             ],
@@ -223,3 +224,30 @@ SOCIAL_AUTH_PIPELINE = (
     # Use a custom function for this, since the details are provided separately
     'dota2_turbo.authentication.pipeline.user_details',
 )
+
+
+# Localization
+
+LANGUAGE_CODE = 'en'
+
+LANGUAGES = [
+    ('en', 'English'),
+    ('ru', 'Русский'),
+    ('de', 'Deutsch'),
+    ('fr', 'Français'),
+    ('es', 'Español'),
+    ('it', 'Italiano'),
+    ('pl', 'Polski'),
+    ('pt', 'Português'),
+    ('tr', 'Türkçe'),
+    ('zh', '中文 (简体)'),
+    ('vi', 'Tiếng Việt'),
+    ('id', 'Bahasa Indonesia'),
+    ('th', 'ไทย'),
+    ('ja', '日本語'),
+    ('ko', '한국어'),
+]
+
+LOCALE_PATHS = [
+    BASE_DIR / 'dota2_turbo' / 'locale',
+]

@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load i18n %}
 {% load custom_filters %}
 
 {% block statistics-active %} active {% endblock %}
@@ -7,8 +8,12 @@
 {% block content %}
 <section class="page-header">
     <div class="container">
-        <h1 class="page-title">Game Statistics</h1>
-        <p class="page-subtitle">Your Turbo Stats, hero picks, wins and match history</p>
+        <h1 class="page-title">
+            {% trans "Game Statistics" %}
+        </h1>
+        <p class="page-subtitle">
+            {% trans "Your Turbo Stats, hero picks, wins and match history" %}
+        </p>
     </div>
 </section>
 
@@ -20,22 +25,30 @@
                 <div class="stat-icon">
                     <img class="user-avatar" src="{{ player.avatarfull }}" alt="{{ player.personaname }}">
                 </div>
-                <h3>Total Games</h3>
+                <h3>
+                    {% trans "Total Games" %}
+                </h3>
                 <p class="stat-value">{{ player_stats.games }}</p>
             </div>
             <div class="stat-card">
                 <div class="stat-icon">📈</div>
-                <h3>Wins</h3>
+                <h3>
+                    {% trans "Wins" %}
+                </h3>
                 <p class="stat-value">{{ player_stats.wins }}</p>
             </div>
             <div class="stat-card">
                 <div class="stat-icon">📉</div>
-                <h3>Losses</h3>
+                <h3>
+                    {% trans "Losses" %}
+                </h3>
                 <p class="stat-value">{{ player_stats.losses }}</p>
             </div>
             <div class="stat-card">
                 <div class="stat-icon">📊</div>
-                <h3>Winrate</h3>
+                <h3>
+                    {% trans "Winrate" %}
+                </h3>
                 <p class="stat-value">{{ player_stats.winrate }}%</p>
             </div>
         </div>
@@ -48,13 +61,15 @@
         <div class="filter-row">
             <div class="filter-bar filter-bar--group">
                 <div class="filter-group">
-                    <span class="filter-label">GROUP BY:</span>
+                    <span class="filter-label">
+                        {% trans "GROUP BY:" %}
+                    </span>
                     <div class="filter-tags">
                         <a href="?group=matches">
-                            <span class="tag {% if group == 'matches' %}active{% endif %}">Matches</span>
+                            <span class="tag {% if group == 'matches' %}active{% endif %}">{% trans "Matches" %}</span>
                         </a>
                         <a href="?group=heroes">
-                            <span class="tag {% if group == 'heroes' %}active{% endif %}">Heroes Stats</span>
+                            <span class="tag {% if group == 'heroes' %}active{% endif %}">{% trans "Heroes Stats" %}</span>
                         </a>
                     </div>
                 </div>
