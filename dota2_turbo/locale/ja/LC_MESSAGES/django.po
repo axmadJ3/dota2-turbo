@@ -23,182 +23,171 @@ msgstr ""
 
 #: dota2_turbo/hero/templates/hero/facets.html:11
 msgid "Facets Statistics"
-msgstr ""
+msgstr "ファセット統計"
 
 #: dota2_turbo/hero/templates/hero/facets.html:14
 msgid "Hero facet statistics for the past 180 days"
-msgstr ""
+msgstr "過去180日間のヒーローファセット統計"
 
 #: dota2_turbo/hero/templates/hero/facets.html:24
 #: dota2_turbo/hero/templates/hero/heroes.html:25
 #: dota2_turbo/player/templates/player/statistics.html:65
 msgid "GROUP BY:"
-msgstr ""
+msgstr "グループ化:"
 
 #: dota2_turbo/hero/templates/hero/facets.html:29
 #: dota2_turbo/hero/templates/hero/heroes.html:30
 #: dota2_turbo/templates/base.html:26
 msgid "Heroes"
-msgstr ""
+msgstr "ヒーロー"
 
 #: dota2_turbo/hero/templates/hero/facets.html:34
 #: dota2_turbo/hero/templates/hero/heroes.html:35
 msgid "Facets"
-msgstr ""
+msgstr "ファセット"
 
 #: dota2_turbo/hero/templates/hero/facets.html:43
 #: dota2_turbo/hero/templates/hero/heroes.html:62
 msgid "FILTER BY POSITION:"
-msgstr ""
+msgstr "ロールでフィルター:"
 
 #: dota2_turbo/hero/templates/hero/heroes.html:11
 msgid "Heroes Statistics"
-msgstr ""
+msgstr "ヒーロー統計"
 
 #: dota2_turbo/hero/templates/hero/heroes.html:14
 msgid "Hero statistics for the past 180 days"
-msgstr ""
+msgstr "過去180日間のヒーロー統計"
 
 #: dota2_turbo/hero/templates/hero/heroes.html:45
 msgid "DATE RANGE:"
-msgstr ""
+msgstr "期間:"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/about.html:11
 msgid "About Dota 2 Turbo"
-msgstr ""
+msgstr "Dota 2 Turboについて"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/about.html:14
 msgid "Your trusted source for game intelligence"
-msgstr ""
+msgstr "信頼できるゲーム分析情報源"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/about.html:23
 msgid "What We Provide"
-msgstr ""
+msgstr "提供内容"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/about.html:28
 msgid "⚙️ System Overview"
-msgstr ""
+msgstr "⚙️ システム概要"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/about.html:31
-msgid ""
-"Dynamic Turbo meta analytics covering hero popularity, win percentages and "
-"match frequency"
-msgstr ""
+msgid "Dynamic Turbo meta analytics covering hero popularity, win percentages and match frequency"
+msgstr "ヒーローの使用率、勝率、試合頻度を網羅したTurboメタの動的分析"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/about.html:36
 msgid "📚 Meta Insights"
-msgstr ""
+msgstr "📚 メタ分析"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/about.html:39
-msgid ""
-"Focused analysis of the current meta, Turbo mode trends, hero facets, and "
-"role-based strategies to keep you ahead of the game"
-msgstr ""
+msgid "Focused analysis of the current meta, Turbo mode trends, hero facets, and role-based strategies to keep you ahead of the game"
+msgstr "現在のメタ、Turboモードの傾向、ヒーローファセット、ロール別戦略を分析し、常に一歩先へ"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/about.html:44
 msgid "🏆 Your Personal Stats"
-msgstr ""
+msgstr "🏆 個人統計"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/about.html:47
-msgid ""
-"Review your personal stats, hero picks, and match history to track progress "
-"and improve your gameplay"
-msgstr ""
+msgid "Review your personal stats, hero picks, and match history to track progress and improve your gameplay"
+msgstr "個人統計、ヒーロー選択、試合履歴を確認して成長を把握し、プレイを改善"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/about.html:52
 msgid "📊 Leaderboard"
-msgstr ""
+msgstr "📊 ランキング"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/about.html:55
-msgid ""
-"Track top players and their win rates with a dynamic leaderboard that "
-"highlights performance in Turbo mode"
-msgstr ""
+msgid "Track top players and their win rates with a dynamic leaderboard that highlights performance in Turbo mode"
+msgstr "Turboモードでのパフォーマンスを強調した動的ランキングでトッププレイヤーと勝率を追跡"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/about.html:60
 msgid "Data Sources"
-msgstr ""
+msgstr "データソース"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/about.html:63
-msgid ""
-"Our statistics are aggregated from public game APIs, analyzed to provide the "
-"most accurate and up-to-date information. All data is presented for "
-"educational and analytical purposes"
-msgstr ""
+msgid "Our statistics are aggregated from public game APIs, analyzed to provide the most accurate and up-to-date information. All data is presented for educational and analytical purposes"
+msgstr "統計データは公開ゲームAPIから収集・分析され、正確かつ最新の情報を提供します。すべてのデータは教育・分析目的で使用されています"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/about.html:66
 msgid "Contact"
-msgstr ""
+msgstr "お問い合わせ"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/about.html:69
 msgid "Email:"
-msgstr ""
+msgstr "メール:"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/about.html:70
 msgid "YouTube:"
-msgstr ""
+msgstr "YouTube:"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/leaderboard.html:11
 #: dota2_turbo/templates/base.html:23
 msgid "Leaderboard"
-msgstr ""
+msgstr "ランキング"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/leaderboard.html:14
 msgid "Only Turbo matches from the past 180 days contribute to the rating"
-msgstr ""
+msgstr "過去180日間のTurboマッチのみがレーティングに反映されます"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/leaderboard.html:24
 msgid "Position"
-msgstr ""
+msgstr "順位"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/leaderboard.html:25
 msgid "Nickname"
-msgstr ""
+msgstr "ニックネーム"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/leaderboard.html:26
 msgid "Rating"
-msgstr ""
+msgstr "レーティング"
 
 #: dota2_turbo/player/templates/player/statistics.html:12
 msgid "Game Statistics"
-msgstr ""
+msgstr "ゲーム統計"
 
 #: dota2_turbo/player/templates/player/statistics.html:15
 msgid "Your Turbo Stats, hero picks, wins and match history"
-msgstr ""
+msgstr "あなたのTurbo統計、ヒーロー選択、勝利数、試合履歴"
 
 #: dota2_turbo/player/templates/player/statistics.html:29
 msgid "Total Games"
-msgstr ""
+msgstr "総試合数"
 
 #: dota2_turbo/player/templates/player/statistics.html:36
 msgid "Wins"
-msgstr ""
+msgstr "勝利"
 
 #: dota2_turbo/player/templates/player/statistics.html:43
 msgid "Losses"
-msgstr ""
+msgstr "敗北"
 
 #: dota2_turbo/player/templates/player/statistics.html:50
 msgid "Winrate"
-msgstr ""
+msgstr "勝率"
 
 #: dota2_turbo/player/templates/player/statistics.html:69
 msgid "Matches"
-msgstr ""
+msgstr "試合"
 
 #: dota2_turbo/player/templates/player/statistics.html:72
 msgid "Heroes Stats"
-msgstr ""
+msgstr "ヒーロー統計"
 
 #: dota2_turbo/templates/base.html:29
 msgid "About"
-msgstr ""
+msgstr "概要"
 
 #: dota2_turbo/templates/base.html:48
 msgid "Log out"
-msgstr ""
+msgstr "ログアウト"
 
 #: dota2_turbo/templates/base.html:52
 msgid "Auth via Steam"
-msgstr ""
+msgstr "Steamでログイン"

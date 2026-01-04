@@ -23,182 +23,171 @@ msgstr ""
 
 #: dota2_turbo/hero/templates/hero/facets.html:11
 msgid "Facets Statistics"
-msgstr ""
+msgstr "Thống kê Facet"
 
 #: dota2_turbo/hero/templates/hero/facets.html:14
 msgid "Hero facet statistics for the past 180 days"
-msgstr ""
+msgstr "Thống kê facet của tướng trong 180 ngày qua"
 
 #: dota2_turbo/hero/templates/hero/facets.html:24
 #: dota2_turbo/hero/templates/hero/heroes.html:25
 #: dota2_turbo/player/templates/player/statistics.html:65
 msgid "GROUP BY:"
-msgstr ""
+msgstr "NHÓM THEO:"
 
 #: dota2_turbo/hero/templates/hero/facets.html:29
 #: dota2_turbo/hero/templates/hero/heroes.html:30
 #: dota2_turbo/templates/base.html:26
 msgid "Heroes"
-msgstr ""
+msgstr "Tướng"
 
 #: dota2_turbo/hero/templates/hero/facets.html:34
 #: dota2_turbo/hero/templates/hero/heroes.html:35
 msgid "Facets"
-msgstr ""
+msgstr "Facet"
 
 #: dota2_turbo/hero/templates/hero/facets.html:43
 #: dota2_turbo/hero/templates/hero/heroes.html:62
 msgid "FILTER BY POSITION:"
-msgstr ""
+msgstr "LỌC THEO VỊ TRÍ:"
 
 #: dota2_turbo/hero/templates/hero/heroes.html:11
 msgid "Heroes Statistics"
-msgstr ""
+msgstr "Thống kê Tướng"
 
 #: dota2_turbo/hero/templates/hero/heroes.html:14
 msgid "Hero statistics for the past 180 days"
-msgstr ""
+msgstr "Thống kê tướng trong 180 ngày qua"
 
 #: dota2_turbo/hero/templates/hero/heroes.html:45
 msgid "DATE RANGE:"
-msgstr ""
+msgstr "KHOẢNG THỜI GIAN:"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/about.html:11
 msgid "About Dota 2 Turbo"
-msgstr ""
+msgstr "Giới thiệu Dota 2 Turbo"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/about.html:14
 msgid "Your trusted source for game intelligence"
-msgstr ""
+msgstr "Nguồn phân tích trò chơi đáng tin cậy của bạn"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/about.html:23
 msgid "What We Provide"
-msgstr ""
+msgstr "Chúng tôi cung cấp"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/about.html:28
 msgid "⚙️ System Overview"
-msgstr ""
+msgstr "⚙️ Tổng quan Hệ thống"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/about.html:31
-msgid ""
-"Dynamic Turbo meta analytics covering hero popularity, win percentages and "
-"match frequency"
-msgstr ""
+msgid "Dynamic Turbo meta analytics covering hero popularity, win percentages and match frequency"
+msgstr "Phân tích meta Turbo động bao gồm mức độ phổ biến của tướng, tỷ lệ thắng và tần suất trận đấu"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/about.html:36
 msgid "📚 Meta Insights"
-msgstr ""
+msgstr "📚 Phân tích Meta"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/about.html:39
-msgid ""
-"Focused analysis of the current meta, Turbo mode trends, hero facets, and "
-"role-based strategies to keep you ahead of the game"
-msgstr ""
+msgid "Focused analysis of the current meta, Turbo mode trends, hero facets, and role-based strategies to keep you ahead of the game"
+msgstr "Phân tích chuyên sâu meta hiện tại, xu hướng chế độ Turbo, facet của tướng và chiến thuật theo vai trò để giúp bạn luôn dẫn đầu"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/about.html:44
 msgid "🏆 Your Personal Stats"
-msgstr ""
+msgstr "🏆 Thống kê Cá nhân"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/about.html:47
-msgid ""
-"Review your personal stats, hero picks, and match history to track progress "
-"and improve your gameplay"
-msgstr ""
+msgid "Review your personal stats, hero picks, and match history to track progress and improve your gameplay"
+msgstr "Xem lại thống kê cá nhân, lựa chọn tướng và lịch sử trận đấu để theo dõi tiến bộ và cải thiện kỹ năng chơi"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/about.html:52
 msgid "📊 Leaderboard"
-msgstr ""
+msgstr "📊 Bảng Xếp hạng"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/about.html:55
-msgid ""
-"Track top players and their win rates with a dynamic leaderboard that "
-"highlights performance in Turbo mode"
-msgstr ""
+msgid "Track top players and their win rates with a dynamic leaderboard that highlights performance in Turbo mode"
+msgstr "Theo dõi những người chơi hàng đầu và tỷ lệ thắng của họ với bảng xếp hạng động, làm nổi bật hiệu suất trong chế độ Turbo"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/about.html:60
 msgid "Data Sources"
-msgstr ""
+msgstr "Nguồn Dữ liệu"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/about.html:63
-msgid ""
-"Our statistics are aggregated from public game APIs, analyzed to provide the "
-"most accurate and up-to-date information. All data is presented for "
-"educational and analytical purposes"
-msgstr ""
+msgid "Our statistics are aggregated from public game APIs, analyzed to provide the most accurate and up-to-date information. All data is presented for educational and analytical purposes"
+msgstr "Thống kê của chúng tôi được tổng hợp từ các API trò chơi công khai và phân tích để cung cấp thông tin chính xác và cập nhật nhất. Tất cả dữ liệu được trình bày cho mục đích giáo dục và phân tích"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/about.html:66
 msgid "Contact"
-msgstr ""
+msgstr "Liên hệ"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/about.html:69
 msgid "Email:"
-msgstr ""
+msgstr "Email:"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/about.html:70
 msgid "YouTube:"
-msgstr ""
+msgstr "YouTube:"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/leaderboard.html:11
 #: dota2_turbo/templates/base.html:23
 msgid "Leaderboard"
-msgstr ""
+msgstr "Bảng Xếp hạng"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/leaderboard.html:14
 msgid "Only Turbo matches from the past 180 days contribute to the rating"
-msgstr ""
+msgstr "Chỉ các trận Turbo trong 180 ngày qua mới được tính vào xếp hạng"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/leaderboard.html:24
 msgid "Position"
-msgstr ""
+msgstr "Vị trí"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/leaderboard.html:25
 msgid "Nickname"
-msgstr ""
+msgstr "Biệt danh"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/leaderboard.html:26
 msgid "Rating"
-msgstr ""
+msgstr "Điểm"
 
 #: dota2_turbo/player/templates/player/statistics.html:12
 msgid "Game Statistics"
-msgstr ""
+msgstr "Thống kê Trò chơi"
 
 #: dota2_turbo/player/templates/player/statistics.html:15
 msgid "Your Turbo Stats, hero picks, wins and match history"
-msgstr ""
+msgstr "Thống kê Turbo, lựa chọn tướng, số trận thắng và lịch sử trận đấu của bạn"
 
 #: dota2_turbo/player/templates/player/statistics.html:29
 msgid "Total Games"
-msgstr ""
+msgstr "Tổng số Trận"
 
 #: dota2_turbo/player/templates/player/statistics.html:36
 msgid "Wins"
-msgstr ""
+msgstr "Thắng"
 
 #: dota2_turbo/player/templates/player/statistics.html:43
 msgid "Losses"
-msgstr ""
+msgstr "Thua"
 
 #: dota2_turbo/player/templates/player/statistics.html:50
 msgid "Winrate"
-msgstr ""
+msgstr "Tỷ lệ thắng"
 
 #: dota2_turbo/player/templates/player/statistics.html:69
 msgid "Matches"
-msgstr ""
+msgstr "Trận đấu"
 
 #: dota2_turbo/player/templates/player/statistics.html:72
 msgid "Heroes Stats"
-msgstr ""
+msgstr "Thống kê Tướng"
 
 #: dota2_turbo/templates/base.html:29
 msgid "About"
-msgstr ""
+msgstr "Giới thiệu"
 
 #: dota2_turbo/templates/base.html:48
 msgid "Log out"
-msgstr ""
+msgstr "Đăng xuất"
 
 #: dota2_turbo/templates/base.html:52
 msgid "Auth via Steam"
-msgstr ""
+msgstr "Đăng nhập bằng Steam"

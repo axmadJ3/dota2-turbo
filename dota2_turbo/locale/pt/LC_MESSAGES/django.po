@@ -23,182 +23,172 @@ msgstr ""
 
 #: dota2_turbo/hero/templates/hero/facets.html:11
 msgid "Facets Statistics"
-msgstr ""
+msgstr "Estatísticas de Facetas"
 
 #: dota2_turbo/hero/templates/hero/facets.html:14
 msgid "Hero facet statistics for the past 180 days"
-msgstr ""
+msgstr "Estatísticas de facetas dos heróis nos últimos 180 dias"
 
 #: dota2_turbo/hero/templates/hero/facets.html:24
 #: dota2_turbo/hero/templates/hero/heroes.html:25
 #: dota2_turbo/player/templates/player/statistics.html:65
 msgid "GROUP BY:"
-msgstr ""
+msgstr "AGRUPAR POR:"
 
 #: dota2_turbo/hero/templates/hero/facets.html:29
 #: dota2_turbo/hero/templates/hero/heroes.html:30
 #: dota2_turbo/templates/base.html:26
 msgid "Heroes"
-msgstr ""
+msgstr "Heróis"
 
 #: dota2_turbo/hero/templates/hero/facets.html:34
 #: dota2_turbo/hero/templates/hero/heroes.html:35
 msgid "Facets"
-msgstr ""
+msgstr "Facetas"
 
 #: dota2_turbo/hero/templates/hero/facets.html:43
 #: dota2_turbo/hero/templates/hero/heroes.html:62
 msgid "FILTER BY POSITION:"
-msgstr ""
+msgstr "FILTRAR POR POSIÇÃO:"
 
 #: dota2_turbo/hero/templates/hero/heroes.html:11
 msgid "Heroes Statistics"
-msgstr ""
+msgstr "Estatísticas de Heróis"
 
 #: dota2_turbo/hero/templates/hero/heroes.html:14
 msgid "Hero statistics for the past 180 days"
-msgstr ""
+msgstr "Estatísticas de heróis dos últimos 180 dias"
 
 #: dota2_turbo/hero/templates/hero/heroes.html:45
 msgid "DATE RANGE:"
-msgstr ""
+msgstr "INTERVALO DE DATAS:"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/about.html:11
 msgid "About Dota 2 Turbo"
-msgstr ""
+msgstr "Sobre o Dota 2 Turbo"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/about.html:14
 msgid "Your trusted source for game intelligence"
-msgstr ""
+msgstr "Sua fonte confiável de inteligência de jogo"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/about.html:23
 msgid "What We Provide"
-msgstr ""
+msgstr "O Que Oferecemos"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/about.html:28
 msgid "⚙️ System Overview"
-msgstr ""
+msgstr "⚙️ Visão Geral do Sistema"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/about.html:31
-msgid ""
-"Dynamic Turbo meta analytics covering hero popularity, win percentages and "
-"match frequency"
-msgstr ""
+msgid "Dynamic Turbo meta analytics covering hero popularity, win percentages and match frequency"
+msgstr "Análise dinâmica da meta do modo Turbo cobrindo popularidade dos heróis, percentuais de vitória e frequência de partidas"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/about.html:36
 msgid "📚 Meta Insights"
-msgstr ""
+msgstr "📚 Análise da Meta"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/about.html:39
-msgid ""
-"Focused analysis of the current meta, Turbo mode trends, hero facets, and "
-"role-based strategies to keep you ahead of the game"
-msgstr ""
+msgid "Focused analysis of the current meta, Turbo mode trends, hero facets, and role-based strategies to keep you ahead of the game"
+msgstr "Análise focada da meta atual, tendências do modo Turbo, facetas dos heróis e estratégias baseadas em funções para manter você à frente no jogo"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/about.html:44
 msgid "🏆 Your Personal Stats"
-msgstr ""
+msgstr "🏆 Suas Estatísticas Pessoais"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/about.html:47
-msgid ""
-"Review your personal stats, hero picks, and match history to track progress "
-"and improve your gameplay"
-msgstr ""
+msgid "Review your personal stats, hero picks, and match history to track progress and improve your gameplay"
+msgstr "Revise suas estatísticas pessoais, escolhas de heróis e histórico de partidas para acompanhar o progresso e melhorar sua jogabilidade"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/about.html:52
 msgid "📊 Leaderboard"
-msgstr ""
+msgstr "📊 Ranking"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/about.html:55
-msgid ""
-"Track top players and their win rates with a dynamic leaderboard that "
-"highlights performance in Turbo mode"
-msgstr ""
+msgid "Track top players and their win rates with a dynamic leaderboard that highlights performance in Turbo mode"
+msgstr "Acompanhe os melhores jogadores e suas taxas de vitória com um ranking dinâmico que destaca o desempenho no modo Turbo"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/about.html:60
 msgid "Data Sources"
-msgstr ""
+msgstr "Fontes de Dados"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/about.html:63
-msgid ""
-"Our statistics are aggregated from public game APIs, analyzed to provide the "
-"most accurate and up-to-date information. All data is presented for "
-"educational and analytical purposes"
-msgstr ""
+msgid "Our statistics are aggregated from public game APIs, analyzed to provide the most accurate and up-to-date information. All data is presented for educational and analytical purposes"
+msgstr "Nossas estatísticas são agregadas a partir de APIs públicas do jogo e analisadas para fornecer as informações mais precisas e atualizadas. Todos os dados são apresentados para fins educacionais e analíticos"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/about.html:66
 msgid "Contact"
-msgstr ""
+msgstr "Contato"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/about.html:69
 msgid "Email:"
-msgstr ""
+msgstr "Email:"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/about.html:70
 msgid "YouTube:"
-msgstr ""
+msgstr "YouTube:"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/leaderboard.html:11
 #: dota2_turbo/templates/base.html:23
 msgid "Leaderboard"
-msgstr ""
+msgstr "Ranking"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/leaderboard.html:14
 msgid "Only Turbo matches from the past 180 days contribute to the rating"
-msgstr ""
+msgstr "Apenas partidas Turbo dos últimos 180 dias contam para o ranking"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/leaderboard.html:24
 msgid "Position"
-msgstr ""
+msgstr "Posição"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/leaderboard.html:25
 msgid "Nickname"
-msgstr ""
+msgstr "Apelido"
 
 #: dota2_turbo/leaderboard/templates/leaderboard/leaderboard.html:26
 msgid "Rating"
-msgstr ""
+msgstr "Classificação"
 
 #: dota2_turbo/player/templates/player/statistics.html:12
 msgid "Game Statistics"
-msgstr ""
+msgstr "Estatísticas do Jogo"
 
 #: dota2_turbo/player/templates/player/statistics.html:15
 msgid "Your Turbo Stats, hero picks, wins and match history"
-msgstr ""
+msgstr "Suas estatísticas no Turbo, escolhas de heróis, vitórias e histórico de partidas"
 
 #: dota2_turbo/player/templates/player/statistics.html:29
 msgid "Total Games"
-msgstr ""
+msgstr "Total de Partidas"
 
 #: dota2_turbo/player/templates/player/statistics.html:36
 msgid "Wins"
-msgstr ""
+msgstr "Vitórias"
 
 #: dota2_turbo/player/templates/player/statistics.html:43
 msgid "Losses"
-msgstr ""
+msgstr "Derrotas"
 
 #: dota2_turbo/player/templates/player/statistics.html:50
 msgid "Winrate"
-msgstr ""
+msgstr "Taxa de Vitória"
 
 #: dota2_turbo/player/templates/player/statistics.html:69
 msgid "Matches"
-msgstr ""
+msgstr "Partidas"
 
 #: dota2_turbo/player/templates/player/statistics.html:72
 msgid "Heroes Stats"
-msgstr ""
+msgstr "Estatísticas de Heróis"
 
 #: dota2_turbo/templates/base.html:29
 msgid "About"
-msgstr ""
+msgstr "Sobre"
 
 #: dota2_turbo/templates/base.html:48
 msgid "Log out"
-msgstr ""
+msgstr "Sair"
 
 #: dota2_turbo/templates/base.html:52
 msgid "Auth via Steam"
-msgstr ""
+msgstr "Autenticação via Steam"
+
