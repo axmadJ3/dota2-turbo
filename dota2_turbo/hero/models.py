@@ -25,6 +25,7 @@ class Hero(models.Model):
 
 class HeroTier(models.Model):
     PERIOD_CHOICES = [
+        ("week", "Last 7 days"),
         ("month", "Last 30 days"),
         ("3months", "Last 90 days"),
         ("6months", "Last 180 days"),

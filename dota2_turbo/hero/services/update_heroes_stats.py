@@ -16,6 +16,7 @@ from dota2_turbo.leaderboard.models import Match
 
 def update_stats():
     PERIODS = {
+        "week": 7,
         "month": 30,
         "3months": 90,
         "6months": 180,
