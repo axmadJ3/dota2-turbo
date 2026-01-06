@@ -1,14 +1,20 @@
 from datetime import datetime, timezone
-from requests.exceptions import ReadTimeout, ConnectionError, HTTPError
+from requests.exceptions import (
+    ReadTimeout, 
+    ConnectionError, 
+    HTTPError, 
+    RequestException
+)
 
 from celery import shared_task
 from django.core.cache import cache
 
 from dota2_turbo.authentication.models import SteamUser
 from dota2_turbo.leaderboard.models import Match
-from dota2_turbo.player.models import PlayerHeroStats
-from dota2_turbo.player.services.update_player_hero_stats import update_hero_stats
 from dota2_turbo.leaderboard.services.update_matches_for_player import update_matches
+from dota2_turbo.player.models import PlayerHeroStats
+from dota2_turbo.player.services.parse_steam_friendlist import parse_friendlist
+from dota2_turbo.player.services.update_player_hero_stats import update_hero_stats
 
 
 @shared_task(
@@ -65,3 +71,22 @@ def update_player_match_history(player_id):
     except SteamUser.DoesNotExist:
         pass
     return result
+
+
+@shared_task(
+    autoretry_for=(RequestException, ValueError, KeyError),
+    retry_backoff=5,
+    retry_jitter=True,
+    retry_kwargs={"max_retries": 3},
+)
+def parse_steam_friendlist(steam_id):
+    friend_ids = parse_friendlist(steam_id)
+
+    try:
+        SteamUser.objects.filter(steamid=steam_id).update(
+            steam_friends=friend_ids,
+            steam_friends_updated_at=datetime.now(timezone.utc)
+        )
+    except SteamUser.DoesNotExist:
+        return 1
+    return 0

@@ -41,7 +41,9 @@
                         {% if position == 3 %}🥉{% endif %}
                         {% if position > 3 %}{{ position }}{% endif %} 
                     </td>
-                    <td>{{ user.personaname }}</td>
+                    <td class="{% if user.steamid in friend_ids %}friend-row{% endif %}">
+                        {{ user.personaname }}
+                    </td>
                     <td class="rating-high">{{ user.total_rating }}</td>
                 </tr>
                 {% endwith %}

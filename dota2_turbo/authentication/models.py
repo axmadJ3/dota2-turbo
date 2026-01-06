@@ -44,6 +44,8 @@ class SteamUser(AbstractBaseUser, PermissionsMixin):
     avatar = models.CharField(max_length=255)
     avatarmedium = models.CharField(max_length=255)
     avatarfull = models.CharField(max_length=255)
+    steam_friends = models.JSONField(default=list, blank=True)
+    steam_friends_updated_at = models.DateTimeField(null=True, blank=True)
 
     date_joined = models.DateTimeField(_('date joined'), default=timezone.now)
     is_active = models.BooleanField(default=True)
