@@ -4,12 +4,12 @@
 
 :root {
     /* Backgrounds */
-    --primary-dark: #0b1020;
-    --secondary-dark: #10172a;
-    --card-bg: #141c33;
-    --bg-tertiary: #1b2442;
-    --hover-bg: #1f2a4d;
-    --border-color: #1e2750;
+    --primary-dark: #1a1a1a;
+    --secondary-dark: #272727;
+    --card-bg: #262626;
+    --bg-tertiary: #2b2b2b;
+    --hover-bg: #303030;
+    --border-color: #353535;
 
     /* Accent (Gold) */
     --accent-gold: #d1a85a;
@@ -19,28 +19,28 @@
 
     /* Text */
     --text-primary: #e6e8ef;
-    --text-secondary: #9aa3b2;
+    --text-secondary: #b0b0b0;
 
     /* Rows */
-    --user-row: #232e57;
-    --friend-row: #6fae8b;
+    --user-row: #3b3b3b;
+    --friend-row: #5f9f7a;
 
     /* Status */
-    --success: #3f7f63;
+    --success: #4f8f6f;
     --warning: #c9a24d;
     --danger: #8f3a3a;
-    --info: #4a72b2;
+    --info: #5a7fb8;
 
     /* Tiers */
-    --tier-s: #8b5cf6;
-    --tier-a: #3b82f6;
-    --tier-b: #22c55e;
-    --tier-c: #f59e0b;
-    --tier-d: #ef4444;
+    --tier-s: #9d7bff;
+    --tier-a: #5a8bff;
+    --tier-b: #4caf7a;
+    --tier-c: #f0a23a;
+    --tier-d: #f05a5a;
 
     /* Charts */
     --pickrate: #facc15;
-    --winrate: #4ade80;
+    --winrate: #5fd89a;
 }
 
 
@@ -262,7 +262,7 @@ a {
    ======================================== */
 
 .page-header {
-    background: linear-gradient(135deg, var(--secondary-dark) 0%, var(--primary-dark) 100%);
+    background: var(--secondary-dark);
     border-bottom: 1px solid var(--border-color);
     padding: 3rem 0;
     margin-bottom: 2rem;
