@@ -14,7 +14,7 @@ def parse_friendlist(steam_id, api_key=None):
         return []
 
     url = (
-        "https://api.steampowered.com/ISteamUser/GetFriendList/v0001/"
+        "http://api.steampowered.com/ISteamUser/GetFriendList/v0001/"
     )
     params = {
         'key': api_key,
