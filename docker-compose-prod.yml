@@ -1,3 +1,7 @@
+volumes:
+  static_volume: {}
+  local_postgres_data: {}
+
 services:
   django:
     build:
