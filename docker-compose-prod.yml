@@ -13,7 +13,7 @@ services:
     depends_on:
       - postgres
     volumes:
-      - static_volume:/home/app/web/dota2_turbo/staticfiles
+      - static_volume:/home/app/dota2_turbo/staticfiles
     expose:
       - "8000"
     env_file:
