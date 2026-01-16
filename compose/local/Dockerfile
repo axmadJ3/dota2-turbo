@@ -7,10 +7,10 @@ RUN apt-get update && \
     apt-get install -y gettext && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
-WORKDIR /code
+WORKDIR /app
 
-COPY requirements.txt .
-RUN pip install -r requirements.txt
+COPY requirements/local.txt .
+RUN pip install -r local.txt
 COPY . .
 
 RUN sed -i 's/\r$//' wait-for-it.sh \

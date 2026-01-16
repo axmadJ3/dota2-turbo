@@ -4,5 +4,6 @@ __pycache__/
 *.pyd
 .git
 .gitignore
+.envs/
 .venv
-vercel
+db.sqlite3

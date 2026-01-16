@@ -1,0 +1,73 @@
+services:
+  django:
+    build:
+      context: .
+      dockerfile: ./compose/prod/django/Dockerfile
+    image: turbodota_django
+    restart: always
+    container_name: django
+    depends_on:
+      - postgres
+    volumes:
+      - static_volume:/home/app/web/dota2_turbo/staticfiles
+    env_file:
+      - ./.envs/.prod.env
+    command: /start
+
+  postgres:
+    image: postgres:16.2
+    container_name: turbodota_postgres
+    restart: always
+    volumes:
+      - local_postgres_data:/var/lib/postgresql/data:cached
+    env_file:
+      - ./.envs/.prod.env
+
+  nginx:
+    build:
+      context: .
+      dockerfile: ./compose/prod/nginx/Dockerfile
+    image: turbodota_nginx
+    restart: always
+    container_name: nginx
+    volumes:
+      - static_volume:/home/app/web/dota2_turbo/staticfiles
+      - /etc/letsencrypt:/etc/letsencrypt:ro
+    ports:
+      - 80:80
+      - 443:443
+    depends_on:
+      - django
+
+  redis:
+    image: redis:6.2-alpine
+    restart: always
+    container_name: turbodota_redis
+    ports:
+      - "6379:6379"
+
+  celery:
+    build:
+      context: .
+      dockerfile: ./compose/prod/django/Dockerfile
+    command: celery -A config worker -l info --concurrency=1
+    container_name: turbodota_celery
+    restart: always
+    env_file:
+      - ./.envs/.prod.env
+    depends_on:
+      - postgres
+      - redis
+
+  celery-beat:
+    build:
+      context: .
+      dockerfile: ./compose/prod/django/Dockerfile
+    command: celery -A config beat -l info
+    container_name: turbodota_celerybeat
+    restart: always
+    env_file:
+      - ./.envs/.prod.env
+    depends_on:
+      - redis
+      - postgres
