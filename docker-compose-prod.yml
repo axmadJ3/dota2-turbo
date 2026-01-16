@@ -36,7 +36,7 @@ services:
     container_name: turbodota_nginx
     restart: always
     volumes:
-      - static_volume:/home/app/web/dota2_turbo/staticfiles
+      - static_volume:/home/app/dota2_turbo/staticfiles
       - /etc/letsencrypt:/etc/letsencrypt:ro
     ports:
       - "80:80"
