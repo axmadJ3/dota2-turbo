@@ -5,8 +5,8 @@ volumes:
 services:
   django:
     build:
-      context: .
-      dockerfile: ./compose/prod/django/Dockerfile
+      context: ./compose/prod/django
+      dockerfile: Dockerfile
     image: turbodota_django
     restart: always
     container_name: django
@@ -31,8 +31,8 @@ services:
 
   nginx:
     build:
-      context: .
-      dockerfile: ./compose/prod/nginx/Dockerfile
+      context: ./compose/prod/nginx
+      dockerfile: Dockerfile
     container_name: turbodota_nginx
     restart: always
     volumes:
@@ -53,8 +53,8 @@ services:
 
   celery:
     build:
-      context: .
-      dockerfile: ./compose/prod/django/Dockerfile
+      context: ./compose/prod/django
+      dockerfile: Dockerfile
     command: celery -A config worker -l info --concurrency=1
     container_name: turbodota_celery
     restart: always
@@ -66,8 +66,8 @@ services:
 
   celery-beat:
     build:
-      context: .
-      dockerfile: ./compose/prod/django/Dockerfile
+      context: ./compose/prod/django
+      dockerfile: Dockerfile
     command: celery -A config beat -l info
     container_name: turbodota_celerybeat
     restart: always
