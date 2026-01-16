@@ -1,4 +1,4 @@
-FROM nginx
+FROM nginx:1.29-alpine
 
 RUN addgroup --system django \
     && adduser --system --ingroup django django
@@ -11,4 +11,4 @@ RUN mkdir /etc/nginx/ssl \
     && chown -R django:django $APP_HOME
 
 RUN rm /etc/nginx/conf.d/default.conf
-COPY ./.envs/nginx.conf /etc/nginx/conf.d
+COPY default.conf /etc/nginx/conf.d/default.conf
