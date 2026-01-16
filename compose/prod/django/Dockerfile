@@ -21,14 +21,14 @@ RUN addgroup --system django \
     && adduser --system --ingroup django django
 
 COPY ./requirements /requirements
-RUN pip install --no-cache-dir -r /requirements/production.txt
+RUN pip install --no-cache-dir -r /requirements/prod.txt
 
 COPY ./compose/prod/django/entrypoint /entrypoint
 RUN sed -i 's/\r$//g' /entrypoint
 RUN chmod +x /entrypoint \ 
     && chown django /entrypoint
 
-COPY ./compose/production/django/start /start
+COPY ./compose/prod/django/start /start
 RUN sed -i 's/\r$//g' /start
 RUN chmod +x /start \ 
     && chown django /start
