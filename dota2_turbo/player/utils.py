@@ -1,7 +1,7 @@
 from datetime import datetime, timezone
 
 from django.core.cache import cache
-from django.db.models import Count, Q
+from django.db.models import Count, Q, Sum
 
 from dota2_turbo.leaderboard.models import Match
 from dota2_turbo.player.models import PlayerHeroStats
@@ -21,6 +21,7 @@ def get_player_stats(player):
         games=Count("id"),
         wins=Count("id", filter=Q(win=True)),
         losses=Count("id", filter=Q(win=False)),
+        rating=Sum("rating_change")
     )
     stats["winrate"] = round(
         (stats["wins"] / stats["games"]) * 100, 1
@@ -32,8 +33,8 @@ def get_player_stats(player):
 
 def get_or_update_cache(
     *,
-    cache_key: str,
-    ts_key: str,
+    cache_key,
+    ts_key,
     func,
     update_task=None,
     update_task_args=(),
