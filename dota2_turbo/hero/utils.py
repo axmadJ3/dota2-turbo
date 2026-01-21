@@ -72,8 +72,10 @@ def common_filters(
     sort_map=None,
 ):
 
-    if period is not None:
+    if period is not None and not "week":
         queryset = queryset.filter(period=period)
+    else:
+        queryset = queryset.filter(period=period).filter(winrate__lt=70)
 
     if position and position != "All":
         queryset = queryset.filter(hero__positions__contains=[position])
