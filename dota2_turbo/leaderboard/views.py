@@ -1,21 +1,15 @@
 from datetime import timedelta
 
 from django.shortcuts import render
-from django.db.models import Sum
-from django.db.models.functions import Coalesce
 from django.core.paginator import Paginator
 from django.utils import timezone
 
-from dota2_turbo.authentication.models import SteamUser
+from dota2_turbo.leaderboard.utils import calculate_total_rating
 from dota2_turbo.player.tasks import parse_steam_friendlist
 
 
 def leaderboard(request):
-    users = SteamUser.objects.annotate(
-        total_rating = Coalesce(
-            Sum('matches__rating_change'), 0
-        )
-    ).order_by('-total_rating')
+    users = calculate_total_rating()
 
     friend_ids = set()
     if request.user.is_authenticated:
