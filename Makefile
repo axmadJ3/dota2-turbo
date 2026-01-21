@@ -21,18 +21,18 @@ clear:
 	docker system prune -a
 
 bash:
-	docker compose -f docker-compose-local.yml exec web bash
+	docker compose -f docker-compose-local.yml exec django bash
 
 
 # Django management commands
 makemigrations:
-	docker compose -f docker-compose-local.yml exec web python manage.py makemigrations
+	docker compose -f docker-compose-local.yml exec django python manage.py makemigrations
 
 migrate:
-	docker compose -f docker-compose-local.yml exec web python manage.py migrate
+	docker compose -f docker-compose-local.yml exec django python manage.py migrate
 
 superuser:
-	docker compose -f docker-compose-local.yml exec web python manage.py createsuperuser
+	docker compose -f docker-compose-local.yml exec django python manage.py createsuperuser
 
 shell:
-	docker compose -f docker-compose-local.yml exec web python manage.py shell
+	docker compose -f docker-compose-local.yml exec django python manage.py shell

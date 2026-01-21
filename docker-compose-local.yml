@@ -38,6 +38,8 @@ services:
       context: .
       dockerfile: compose/local/Dockerfile
     container_name: turbodota_celery
+    env_file:
+      - .envs/.local.env
     environment:
       - DJANGO_SETTINGS_MODULE=config.settings.local
     command: celery -A config worker -l info --concurrency=1
@@ -50,6 +52,8 @@ services:
       context: .
       dockerfile: compose/local/Dockerfile
     container_name: turbodota_celerybeat
+    env_file:
+      - .envs/.local.env
     environment:  
       - DJANGO_SETTINGS_MODULE=config.settings.local
     command: celery -A config beat -l info
