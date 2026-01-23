@@ -1,5 +1,5 @@
-from django.db.models import Sum
-from django.db.models.functions import Coalesce
+from django.db.models import Sum, F, Window, IntegerField
+from django.db.models.functions import Coalesce, Rank
 
 from dota2_turbo.authentication.models import SteamUser
 
@@ -9,9 +9,13 @@ def calculate_rating_change(win, kills, deaths, assists):
 
 
 def calculate_total_rating():
-    users = SteamUser.objects.annotate(
-        total_rating = Coalesce(
-            Sum('matches__rating_change'), 0
+    return SteamUser.objects.annotate(
+        total_rating=Coalesce(
+            Sum('matches__rating_change'), 0,
+            output_field=IntegerField()
+        ),
+        rank=Window(
+            expression=Rank(),
+            order_by=F('total_rating').desc()
         )
-    ).order_by('-total_rating')
-    return users
+    )

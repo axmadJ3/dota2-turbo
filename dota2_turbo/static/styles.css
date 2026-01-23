@@ -10,6 +10,7 @@
     --bg-tertiary: #2b2b2b;
     --hover-bg: #303030;
     --border-color: #353535;
+    --my-rank-ackgrounds: #121212;
 
     /* Accent (Gold) */
     --accent-gold: #d1a85a;
@@ -30,6 +31,7 @@
     --warning: #c9a24d;
     --danger: #8f3a3a;
     --info: #5a7fb8;
+    --loading: #999;
 
     /* Tiers */
     --tier-s: #9d7bff;
@@ -761,6 +763,13 @@ a {
     background-color: rgba(205, 127, 50, 0.05);
 }
 
+.leaderboard-loader {
+    text-align: center;
+    padding: 1.5rem;
+    color: var(--loading);
+    font-size: 14px;
+}
+
 .medal {
     margin-right: 0.5rem;
 }
@@ -776,6 +785,27 @@ a {
 
 .friend-row {
     color: var(--friend-row) !important;
+}
+
+.my-rank-wrapper {
+    position: sticky;
+    bottom: 0;
+    margin-top: 1rem;
+    border-top: 2px solid var(--hover-bg);
+    background: var(--my-rank-ackgrounds);
+    box-shadow: 0 -6px 16px rgba(0,0,0,.4);
+}
+
+.my-rank-table tr {
+    background: var(--user-row);
+}
+
+.my-rank-table td {
+    font-weight: 600;
+}
+
+.hidden {
+    display: none;
 }
 
 /* ========================================

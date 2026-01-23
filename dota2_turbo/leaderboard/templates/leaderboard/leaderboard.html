@@ -26,21 +26,16 @@
                     <th>{% trans "Rating" %}</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="leaderboard-body">
             {% for user in page.object_list %}
                 {% with position=page.start_index|add:forloop.counter0 %}
                 <tr class="
                     {% if position == 1 %}rank-1{% endif %}
                     {% if position == 2 %}rank-2{% endif %}
                     {% if position == 3 %}rank-3{% endif %}
-                    {% if request.user == user %}user-row{% endif %}
+                    {% if request.user.steamid == user.steamid %}user-row{% endif %}
                     ">
-                    <td>
-                        {% if position == 1 %}🥇{% endif %}
-                        {% if position == 2 %}🥈{% endif %}
-                        {% if position == 3 %}🥉{% endif %}
-                        {% if position > 3 %}{{ position }}{% endif %} 
-                    </td>
+                    <td>${renderRank(user.rank)}</td>
                     <td class="{% if user.steamid in friend_ids %}friend-row{% endif %}">
                         {{ user.personaname }}
                     </td>
@@ -50,27 +45,19 @@
             {% endfor %}
             </tbody>
         </table>
+        <div id="my-rank-wrapper" class="my-rank-wrapper hidden">
+            <table class="leaderboard-table my-rank-table">
+                <tbody>
+                    <tr id="my-rank-row">
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
-    <div class="pagination">
-    {% if page.has_previous %}
-        <a href="?page=1">&laquo;</a>
-        <a href="?page={{ page.previous_page_number }}">←</a>
-    {% endif %}
-
-    {% for num in page.paginator.page_range %}
-        {% if num >= page.number|add:-2 and num <= page.number|add:2 %}
-            {% if num == page.number %}
-                <span class="current">{{ num }}</span>
-            {% else %}
-                <a href="?page={{ num }}">{{ num }}</a>
-            {% endif %}
-        {% endif %}
-    {% endfor %}
-
-    {% if page.has_next %}
-        <a href="?page={{ page.next_page_number }}">→</a>
-        <a href="?page={{ page.paginator.num_pages }}">&raquo;</a>
-    {% endif %}
+    <div id="leaderboard-sentinel"></div>
+    <div id="leaderboard-loader" class="leaderboard-loader hidden">
+        {% trans "Loading..." %}
     </div>
 </section>
+<script src="{% static 'js/leaderboard.js' %}"></script>
 {% endblock %}

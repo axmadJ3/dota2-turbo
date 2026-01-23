@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.postgres',
 
     # 3rd party
+    'rest_framework',
     'social_django',
     'django_celery_beat',
 
