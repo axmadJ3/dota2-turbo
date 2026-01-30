@@ -21,6 +21,9 @@ def update_matches(player_id):
     except SteamUser.DoesNotExist:
         return 0
 
+    if not player.steamid32:
+        return 0
+
     url = (
         f"https://api.opendota.com/api/players/{player.steamid32}/matches?game_mode=23&date=180&significant=0"
     )
