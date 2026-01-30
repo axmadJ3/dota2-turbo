@@ -5,6 +5,7 @@ from celery import shared_task
 
 from dota2_turbo.authentication.models import SteamUser
 from dota2_turbo.leaderboard.services.update_matches_for_player import update_matches
+from dota2_turbo.leaderboard.services.remove_low_rating_users import remove_users
 
 
 logger = logging.getLogger(__name__)
@@ -29,3 +30,9 @@ def update_all_players():
 
     for player_id in player_ids:
         update_matches_for_player.delay(player_id)
+
+
+@shared_task
+def remove_low_rating_users():
+    removed = remove_users()
+    return removed
