@@ -48,6 +48,7 @@ services:
     image: redis:6.2-alpine
     restart: always
     container_name: turbodota_redis
+    command: redis-server --save "" --appendonly no
     ports:
       - "6379:6379"
 
