@@ -1,7 +1,17 @@
 from datetime import datetime, timezone
 
 from django.core.cache import cache
-from django.db.models import Count, Q, Sum
+from django.db.models import (
+    Q,
+    F,
+    Sum,
+    When,
+    Case,
+    Count,
+    Value,
+    FloatField
+)
+from django.db.models.functions import Round
 
 from dota2_turbo.leaderboard.models import Match
 from dota2_turbo.player.models import PlayerHeroStats
@@ -62,6 +72,16 @@ def get_player_heroes(player):
         PlayerHeroStats.objects
         .filter(player=player)
         .select_related("hero")
+        .annotate(
+            winrate=Case(
+                When(games=0, then=Value(0.0)),
+                default=Round(
+                    F("win") * 100.0 / F("games"),
+                    2
+                ),
+                output_field=FloatField()
+            )
+        )
     )
     heroes.sort(
         key=lambda x: (
