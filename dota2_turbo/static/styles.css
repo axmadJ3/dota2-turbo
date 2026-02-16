@@ -853,8 +853,17 @@ a {
 .about-text {
     color: var(--text-secondary);
     line-height: 1.8;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     font-size: 0.95rem;
+}
+
+.recommendation-list {
+    margin-top: 20px;
+    margin-bottom: 1.5rem;
+    padding-left: 25px;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.8;
 }
 
 .about-features {
