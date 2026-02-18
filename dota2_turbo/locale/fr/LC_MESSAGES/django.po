@@ -191,3 +191,18 @@ msgstr "Déconnexion"
 #: dota2_turbo/templates/base.html:52
 msgid "Auth via Steam"
 msgstr "Connexion via Stea"
+
+msgid "In order for us to receive data about your games and calculate the rating, it is necessary:"
+msgstr "Afin que nous puissions recevoir les données de vos parties et calculer le classement, il est nécessaire de :"
+
+msgid "Launch Dota 2"
+msgstr "Lancez Dota 2"
+
+msgid "Click on the gear icon (settings) in the upper-left corner"
+msgstr "Cliquez sur l’icône en forme d’engrenage (paramètres) dans le coin supérieur gauche"
+
+msgid "Go to the \"Social Networks\" tab (or \"Communication\"/\"Profile\")"
+msgstr "Accédez à l’onglet \"Réseaux sociaux\" (ou \"Communication\"/\"Profil\")"
+
+msgid "Find the item related to \"Disclosure of match data\" (in the English version — Expose Public Match Data)"
+msgstr "Recherchez l’option liée à la \"Divulgation des données de match\" (dans la version anglaise — Expose Public Match Data)"

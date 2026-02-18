@@ -191,3 +191,18 @@ msgstr "Keluar"
 #: dota2_turbo/templates/base.html:52
 msgid "Auth via Steam"
 msgstr "Masuk melalui Steam"
+
+msgid "In order for us to receive data about your games and calculate the rating, it is necessary:"
+msgstr "Agar kami dapat menerima data tentang pertandingan Anda dan menghitung peringkat, Anda perlu:"
+
+msgid "Launch Dota 2"
+msgstr "Buka Dota 2"
+
+msgid "Click on the gear icon (settings) in the upper-left corner"
+msgstr "Klik ikon roda gigi (pengaturan) di pojok kiri atas"
+
+msgid "Go to the \"Social Networks\" tab (or \"Communication\"/\"Profile\")"
+msgstr "Buka tab \"Jejaring Sosial\" (atau \"Komunikasi\"/\"Profil\")"
+
+msgid "Find the item related to \"Disclosure of match data\" (in the English version — Expose Public Match Data)"
+msgstr "Temukan opsi terkait \"Pengungkapan Data Pertandingan\" (dalam versi bahasa Inggris — Expose Public Match Data)"

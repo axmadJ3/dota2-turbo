@@ -192,3 +192,17 @@ msgstr "Sair"
 msgid "Auth via Steam"
 msgstr "Autenticação via Steam"
 
+msgid "In order for us to receive data about your games and calculate the rating, it is necessary:"
+msgstr "Para que possamos receber dados sobre as suas partidas e calcular a classificação, é necessário:"
+
+msgid "Launch Dota 2"
+msgstr "Inicie o Dota 2"
+
+msgid "Click on the gear icon (settings) in the upper-left corner"
+msgstr "Clique no ícone de engrenagem (configurações) no canto superior esquerdo"
+
+msgid "Go to the \"Social Networks\" tab (or \"Communication\"/\"Profile\")"
+msgstr "Vá para a aba \"Redes sociais\" (ou \"Comunicação\"/\"Perfil\")"
+
+msgid "Find the item related to \"Disclosure of match data\" (in the English version — Expose Public Match Data)"
+msgstr "Encontre a opção relacionada à \"Divulgação de dados das partidas\" (na versão em inglês — \"Expose Public Match Data\")"

@@ -191,3 +191,18 @@ msgstr "Đăng xuất"
 #: dota2_turbo/templates/base.html:52
 msgid "Auth via Steam"
 msgstr "Đăng nhập bằng Steam"
+
+msgid "In order for us to receive data about your games and calculate the rating, it is necessary:"
+msgstr "Để chúng tôi có thể nhận dữ liệu về các trận đấu của bạn và tính toán xếp hạng, bạn cần:"
+
+msgid "Launch Dota 2"
+msgstr "Khởi động Dota 2"
+
+msgid "Click on the gear icon (settings) in the upper-left corner"
+msgstr "Nhấp vào biểu tượng bánh răng (cài đặt) ở góc trên bên trái"
+
+msgid "Go to the \"Social Networks\" tab (or \"Communication\"/\"Profile\")"
+msgstr "Chuyển đến tab \"Mạng xã hội\" (hoặc \"Giao tiếp\"/\"Hồ sơ\")"
+
+msgid "Find the item related to \"Disclosure of match data\" (in the English version — Expose Public Match Data)"
+msgstr "Tìm mục liên quan đến \"Công khai dữ liệu trận đấu\" (trong phiên bản tiếng Anh — \"Expose Public Match Data\")"

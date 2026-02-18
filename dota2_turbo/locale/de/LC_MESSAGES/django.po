@@ -191,3 +191,18 @@ msgstr "Abmelden"
 #: dota2_turbo/templates/base.html:52
 msgid "Auth via Steam"
 msgstr "Anmeldung über Steam"
+
+msgid "In order for us to receive data about your games and calculate the rating, it is necessary:"
+msgstr "Damit wir Daten über Ihre Spiele erhalten und die Bewertung berechnen können, ist Folgendes erforderlich:"
+
+msgid "Launch Dota 2"
+msgstr "Starten Sie Dota 2"
+
+msgid "Click on the gear icon (settings) in the upper-left corner"
+msgstr "Klicken Sie auf das Zahnradsymbol (Einstellungen) in der oberen linken Ecke"
+
+msgid "Go to the \"Social Networks\" tab (or \"Communication\"/\"Profile\")"
+msgstr "Gehen Sie zum Tab \"Soziale Netzwerke\" (oder \"Kommunikation\"/\"Profil\")"
+
+msgid "Find the item related to \"Disclosure of match data\" (in the English version — Expose Public Match Data)"
+msgstr "Suchen Sie den Eintrag \"Freigabe von Spieldaten\" (in der englischen Version — Expose Public Match Data)"

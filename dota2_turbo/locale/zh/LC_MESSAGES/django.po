@@ -191,3 +191,18 @@ msgstr "退出登录"
 #: dota2_turbo/templates/base.html:52
 msgid "Auth via Steam"
 msgstr "通过 Steam 登录"
+
+msgid "In order for us to receive data about your games and calculate the rating, it is necessary:"
+msgstr "为了让我们能够获取您的比赛数据并计算评分，您需要："
+
+msgid "Launch Dota 2"
+msgstr "启动 Dota 2"
+
+msgid "Click on the gear icon (settings) in the upper-left corner"
+msgstr "点击左上角的齿轮图标（设置）"
+
+msgid "Go to the \"Social Networks\" tab (or \"Communication\"/\"Profile\")"
+msgstr "进入“社交网络”选项卡（或“通讯”/“个人资料”）"
+
+msgid "Find the item related to \"Disclosure of match data\" (in the English version — Expose Public Match Data)"
+msgstr "找到与“公开比赛数据”相关的选项（英文版本为“Expose Public Match Data”）"

@@ -192,3 +192,18 @@ msgstr "Cerrar sesión"
 #: dota2_turbo/templates/base.html:52
 msgid "Auth via Steam"
 msgstr "Iniciar sesión con Steam"
+
+msgid "In order for us to receive data about your games and calculate the rating, it is necessary:"
+msgstr "Para que podamos recibir datos sobre tus partidas y calcular la clasificación, es necesario:"
+
+msgid "Launch Dota 2"
+msgstr "Inicia Dota 2"
+
+msgid "Click on the gear icon (settings) in the upper-left corner"
+msgstr "Haz clic en el ícono de engranaje (configuración) en la esquina superior izquierda"
+
+msgid "Go to the \"Social Networks\" tab (or \"Communication\"/\"Profile\")"
+msgstr "Ve a la pestaña \"Redes sociales\" (o \"Comunicación\"/\"Perfil\")"
+
+msgid "Find the item related to \"Disclosure of match data\" (in the English version — Expose Public Match Data)"
+msgstr "Busca la opción relacionada con \"Divulgación de datos de partidas\" (en la versión en inglés — Expose Public Match Data)"

@@ -193,3 +193,18 @@ msgstr "Выйти"
 #: dota2_turbo/templates/base.html:52
 msgid "Auth via Steam"
 msgstr "Вход через Steam"
+
+msgid "In order for us to receive data about your games and calculate the rating, it is necessary:"
+msgstr "Чтобы мы могли получать данные о ваших матчах и рассчитывать рейтинг, необходимо:"
+
+msgid "Launch Dota 2"
+msgstr "Запустите Dota 2"
+
+msgid "Click on the gear icon (settings) in the upper-left corner"
+msgstr "Нажмите на значок шестерёнки (Настройки) в левом верхнем углу"
+
+msgid "Go to the \"Social Networks\" tab (or \"Communication\"/\"Profile\")"
+msgstr "Перейдите во вкладку \"Социальные сети\" (или \"Коммуникация\"/\"Профиль\")"
+
+msgid "Find the item related to \"Disclosure of match data\" (in the English version — Expose Public Match Data)"
+msgstr "Найдите пункт, связанный с \"Раскрытием данных о матчах\" (в английской версии — \"Expose Public Match Data\")"

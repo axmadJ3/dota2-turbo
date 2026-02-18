@@ -191,3 +191,18 @@ msgstr "로그아웃"
 #: dota2_turbo/templates/base.html:52
 msgid "Auth via Steam"
 msgstr "Steam으로 로그인"
+
+msgid "In order for us to receive data about your games and calculate the rating, it is necessary:"
+msgstr "귀하의 경기 데이터를 수신하고 등급을 계산하기 위해 다음 단계를 완료해야 합니다:"
+
+msgid "Launch Dota 2"
+msgstr "Dota 2를 실행하세요"
+
+msgid "Click on the gear icon (settings) in the upper-left corner"
+msgstr "왼쪽 상단의 톱니바퀴 아이콘(설정)을 클릭하세요"
+
+msgid "Go to the \"Social Networks\" tab (or \"Communication\"/\"Profile\")"
+msgstr "\"소셜 네트워크\" 탭(또는 \"커뮤니케이션\"/\"프로필\")으로 이동하세요"
+
+msgid "Find the item related to \"Disclosure of match data\" (in the English version — Expose Public Match Data)"
+msgstr "\"경기 데이터 공개\"와 관련된 항목을 찾으세요 (영어 버전에서는 \"Expose Public Match Data\")"

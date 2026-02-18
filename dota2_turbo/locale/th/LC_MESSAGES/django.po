@@ -191,3 +191,18 @@ msgstr "ออกจากระบบ"
 #: dota2_turbo/templates/base.html:52
 msgid "Auth via Steam"
 msgstr "เข้าสู่ระบบผ่าน Stea"
+
+msgid "In order for us to receive data about your games and calculate the rating, it is necessary:"
+msgstr "เพื่อให้เราสามารถรับข้อมูลการแข่งขันของคุณและคำนวณอันดับได้ จำเป็นต้อง:"
+
+msgid "Launch Dota 2"
+msgstr "เปิด Dota 2"
+
+msgid "Click on the gear icon (settings) in the upper-left corner"
+msgstr "คลิกที่ไอคอนรูปเฟือง (การตั้งค่า) ที่มุมซ้ายบน"
+
+msgid "Go to the \"Social Networks\" tab (or \"Communication\"/\"Profile\")"
+msgstr "ไปที่แท็บ \"โซเชียลเน็ตเวิร์ก\" (หรือ \"การสื่อสาร\"/\"โปรไฟล์\")"
+
+msgid "Find the item related to \"Disclosure of match data\" (in the English version — Expose Public Match Data)"
+msgstr "ค้นหารายการที่เกี่ยวข้องกับ \"การเปิดเผยข้อมูลการแข่งขัน\" (ในเวอร์ชันภาษาอังกฤษคือ \"Expose Public Match Data\")"
