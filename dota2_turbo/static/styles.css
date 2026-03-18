@@ -783,7 +783,7 @@ a {
     background-color: var(--user-row);
 }
 
-.friend-row {
+.friend-row td {
     color: var(--friend-row) !important;
 }
 
